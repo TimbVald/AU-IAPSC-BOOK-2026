@@ -1,0 +1,91 @@
+{
+  "file": "MAY 2026 activities matrix.docm",
+  "month_title": "MAY 2026",
+  "month": "MAY",
+  "month_num": 5,
+  "year": 2026,
+  "period": "2026-05",
+  "headers": [
+    "Dates & Time",
+    "Venue",
+    "Staff concerned",
+    "Activity",
+    "Objectives, Expected Outcomes",
+    "Status of report"
+  ],
+  "activities": [
+    {
+      "date": "Monday 04 ; 07:30-15:00.",
+      "venue": "Small Conference Hall 1 at AUHQ,  and online",
+      "staff": "Staff concerned",
+      "activity": "2026 Mid-Year (Interim) Review Report Workshop",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Wednesday 06 ; 10.00",
+      "venue": "AU-IAPSC Conference Hall",
+      "staff": "All Staff",
+      "activity": "AU-IAPSC Staff Monthly Meeting",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Thursday 09 ; 06.30 PM",
+      "venue": "Hilton Hôtel",
+      "staff": "Coordinator",
+      "activity": "Europe Day",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Tuesday 12 ; 10.00",
+      "venue": "The esplanade of the Yaounde National Museum",
+      "staff": "All staff",
+      "activity": "5th International Day of Plant Health 2026 on the theme “ Plant biosecurity for food security” jointly organised with MINADER…",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Tuesday, 12 15:00–17:00 (GMT+8)",
+      "venue": "Online",
+      "staff": "Coordinator",
+      "activity": "Technical speakers and panelists in the session on “Plant Biosecurity for Food Security”).",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Thursday 14",
+      "venue": "Online",
+      "staff": "Coordinator",
+      "activity": "Strategic Invitation to AU Technical Institutions to Contribute to ATDF 2026 Flagship Publication ; TradeMark Africa (TMA) ; high-level technical consultations",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Friday 15 3:00 pm GMT+3",
+      "venue": "Online",
+      "staff": "Staff Concerned",
+      "activity": "Celebration of the International Day of Plant Health (IDPH)",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Monday 18-Wednesday 20",
+      "venue": "Addis-Ababa ; Ethiopia",
+      "staff": "Dr Bayendi Loudit Sandrine",
+      "activity": "The Annual Project Progress Monitoring Meeting",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Friday 22 09:00-09:30",
+      "venue": "Online",
+      "staff": "Staff Concerned",
+      "activity": "Preparation Ibadan Workshop in July",
+      "objectives_outcomes": "",
+      "status": ""
+    }
+  ],
+  "trailing_notes": []
+}

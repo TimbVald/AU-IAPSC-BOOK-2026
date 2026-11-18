@@ -1,4 +1,4 @@
-# AU-IAPSC BOOK 2026
+﻿# AU-IAPSC BOOK 2026
 
 Projet de génération du livre annuel des activités de l'AU-IAPSC à partir des
 matrices d'activités mensuelles (.docm) et d'articles de référence.
@@ -92,3 +92,10 @@ AU-IAPSC-BOOK-2026/
 
 Test PDF rapide : `output/previews/test_fr.pdf` (généré avec succès,
 accents français vérifiés).
+
+## Livre institutionnel 2026 (pipeline)
+
+- Extraction : `.venv\Scripts\python.exe src\extraction\extract_docm.py`
+- Stats : `.venv\Scripts\python.exe src\statistics\compute_stats.py` puis `make_charts.py`
+- Donnees livre : `.venv\Scripts\python.exe src\analysis\build_book_data.py`
+- Rendu livre : `.venv\Scripts\python.exe src\pdf_generation\build_book.py` → `output\final\AU-IAPSC_Livre_Activites_2026.pdf`

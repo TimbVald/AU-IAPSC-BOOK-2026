@@ -1,0 +1,2766 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>AU-IAPSC — Livre des Activités 2026</title>
+<style>
+@font-face{font-family:'Archivo';src:url('static/fonts/Archivo-500.ttf');font-weight:500}
+@font-face{font-family:'Archivo';src:url('static/fonts/Archivo-600.ttf');font-weight:600}
+@font-face{font-family:'Archivo';src:url('static/fonts/Archivo-700.ttf');font-weight:700}
+@font-face{font-family:'Archivo';src:url('static/fonts/Archivo-800.ttf');font-weight:800}
+@font-face{font-family:'Archivo';src:url('static/fonts/Archivo-900.ttf');font-weight:900}
+@font-face{font-family:'Source Serif 4';src:url('static/fonts/Source_Serif_4-400.ttf');font-weight:400}
+@font-face{font-family:'Source Serif 4';src:url('static/fonts/Source_Serif_4-600.ttf');font-weight:600}
+@font-face{font-family:'Source Serif 4';src:url('static/fonts/Source_Serif_4-700.ttf');font-weight:700}
+@font-face{font-family:'Marcellus';src:url('static/fonts/Marcellus-400.ttf');font-weight:400}
+:root{--green:#1E7A44;--green2:#3FAD49;--deep:#0B3D24;--char:#263338;--bordeaux:#92203A;--bordeaux2:#7D122C;--yellow:#FFF200;--pale:#F2F9F9;--mist:#EAF4EE;--gray:#8A9A94;--line:#D8E2DC}
+*{margin:0;padding:0;box-sizing:border-box}
+@page{size:A4;margin:0}
+body{font-family:'Source Serif 4',serif;color:var(--char)}
+.page{width:210mm;height:297mm;page-break-after:always;position:relative;overflow:hidden}
+.page:last-child{page-break-after:auto}
+.pfoot{position:absolute;bottom:8mm;left:16mm;right:16mm;display:flex;justify-content:space-between;font-family:'Archivo';font-size:7pt;color:var(--gray);letter-spacing:.1em;text-transform:uppercase;border-top:.4mm solid var(--line);padding-top:2.5mm}
+/* newsletter masthead on content pages */
+.mtop{position:absolute;top:8mm;left:16mm;right:16mm;display:flex;justify-content:space-between;align-items:center;border-bottom:.6mm solid var(--line);padding-bottom:2.5mm}
+.mtop img{height:8.5mm;width:auto}
+.mtop .org{font-family:'Archivo';font-weight:700;font-size:7pt;letter-spacing:.12em;color:var(--deep);text-transform:uppercase}
+.mtop .org small{display:block;font-weight:500;color:var(--gray);font-size:5.8pt;letter-spacing:.08em;margin-top:.6mm}
+.mtop .doc{font-family:'Archivo';font-weight:600;font-size:7pt;color:var(--green);letter-spacing:.14em;text-transform:uppercase;text-align:right}
+.ph{padding:21mm 16mm 9mm}
+.kick{font-family:'Archivo';font-weight:700;font-size:7.5pt;letter-spacing:.26em;color:var(--green);text-transform:uppercase}
+.kick.b{color:var(--bordeaux)}
+h2.pt{font-family:'Archivo';font-weight:800;font-size:21pt;color:var(--deep);line-height:1.12;margin:2.5mm 0 5mm}
+.rule{height:1.1mm;background:linear-gradient(90deg,var(--green),var(--yellow) 60%,transparent);width:52mm;margin-bottom:6mm}
+/* cover — full-bleed image like the reference newsletter */
+.cover{background:linear-gradient(160deg,#0B3D24 0%,#14532D 55%,#1E7A44 100%);color:#fff;display:flex;flex-direction:column}
+.coverbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cover-shade{position:absolute;inset:0;background:linear-gradient(165deg,rgba(11,61,36,.95) 0%,rgba(11,61,36,.80) 48%,rgba(30,122,68,.45) 100%)}
+.cover .mast,.cover .hero,.cover .foot,.cover .cover-stats{position:relative;z-index:2}
+.cover .cover-stats{display:flex;border-top:1.2mm solid var(--yellow);background:rgba(11,61,36,.5);margin-top:auto}
+.cstat{flex:1;padding:4.5mm 5mm;border-right:.4mm solid rgba(255,255,255,.18)}
+.cstat:last-child{border-right:none}
+.cstat .v{font-family:'Marcellus',serif;font-size:21pt;color:#fff;line-height:1}
+.cstat .l{font-family:'Archivo';font-weight:600;font-size:6.3pt;color:#BFE3CC;text-transform:uppercase;letter-spacing:.1em;margin-top:1.6mm;line-height:1.55}
+.cover .mast{display:flex;justify-content:space-between;align-items:flex-start;padding:14mm 18mm 0}
+.cover .mast img{height:20mm;width:auto}
+.cover .mast .org{font-family:'Archivo';font-weight:700;font-size:8pt;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);text-align:right}
+.cover .mast .org small{display:block;font-weight:500;color:#BFE3CC;font-size:6.5pt;letter-spacing:.08em;margin-top:2mm}
+.cover .hero{flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 18mm}
+.cover .kicker{font-family:'Archivo';font-weight:600;font-size:9.5pt;letter-spacing:.32em;color:var(--yellow);text-transform:uppercase;margin-bottom:7mm}
+.cover h1{font-family:'Marcellus',serif;font-weight:400;font-size:48pt;line-height:1.02;color:#fff}
+.cover h1 em{font-style:normal;color:var(--yellow)}
+.cover .sub{margin-top:9mm;font-family:'Archivo';font-weight:500;font-size:12pt;color:#DFF0E4;letter-spacing:.04em}
+.cover .period{margin-top:4mm;font-family:'Archivo';font-weight:700;font-size:14.5pt;color:#fff;letter-spacing:.06em}
+.cover .period::before{content:"";display:inline-block;width:14mm;height:1.4mm;background:var(--yellow);vertical-align:middle;margin-right:4mm}
+.cover .badge{display:inline-block;margin-top:5mm;background:var(--yellow);color:var(--deep);font-family:'Archivo';font-weight:800;font-size:8.5pt;letter-spacing:.14em;text-transform:uppercase;padding:2mm 5mm;width:fit-content}
+.cover .foot{padding:0 18mm 13mm;display:flex;justify-content:space-between;align-items:flex-end}
+.cover .edition{font-family:'Archivo';font-size:7.5pt;color:#9FC7AB;letter-spacing:.08em;text-transform:uppercase;line-height:1.7}
+.cover .photo{height:50mm;width:100%;object-fit:cover;object-position:center 30%;border-top:1.2mm solid var(--yellow)}
+/* text pages */
+.txt{font-size:10.5pt;line-height:1.72;text-align:justify}
+.txt p{margin-bottom:4mm}
+.txt p:first-child::first-letter{font-family:'Marcellus';font-size:30pt;line-height:.85;color:var(--green);padding-right:1mm}
+.cols2{display:table;width:100%}
+.cols2 .col{display:table-cell;width:50%;vertical-align:top}
+.cols2 .col:first-child{padding-right:7mm}
+.box{background:var(--mist);border-left:3mm solid var(--green);padding:5mm;margin:4mm 0}
+.box.b{background:#FBF1F3;border-left-color:var(--bordeaux)}
+.box h4{font-family:'Archivo';font-weight:700;font-size:8pt;letter-spacing:.2em;text-transform:uppercase;margin-bottom:2.5mm;color:var(--green)}
+.box.b h4{color:var(--bordeaux)}
+.box p,.box li{font-size:9.5pt;line-height:1.6}
+.box ul{list-style:none}
+.box li{padding:1.5mm 0 1.5mm 5mm;position:relative}
+.box li::before{content:"";position:absolute;left:0;top:3.6mm;width:2.2mm;height:2.2mm;background:var(--green2);border-radius:50%}
+.pull{background:var(--deep);color:#fff;padding:6mm 7mm;margin:5mm 0;border-left:4mm solid var(--yellow)}
+.pull p{font-family:'Marcellus';font-size:14.5pt;line-height:1.4}
+.pull .who{font-family:'Archivo';font-weight:600;font-size:7pt;color:#9FC7AB;letter-spacing:.14em;text-transform:uppercase;margin-top:2.5mm}
+figure.ph{margin:4mm 0}
+figure.ph img{width:100%;height:60mm;object-fit:cover;display:block}
+figure.ph figcaption{font-family:'Archivo';font-size:7.5pt;color:var(--gray);padding-top:2mm;letter-spacing:.04em}
+/* sommaire */
+.toc{padding:15mm 18mm}
+.toc .part{margin-bottom:6mm}
+.toc .part .t{font-family:'Archivo';font-weight:800;font-size:13pt;color:var(--deep)}
+.toc .part .d{font-family:'Archivo';font-size:8.5pt;color:var(--gray);letter-spacing:.06em;margin-top:1mm}
+.toc .chap{margin:2.5mm 0 2.5mm 8mm;font-family:'Source Serif 4';font-size:10pt;color:var(--char)}
+.toc .chap b{font-family:'Archivo';font-weight:600;color:var(--green);margin-right:3mm}
+/* stats */
+.kpis{display:flex;gap:4mm;margin-bottom:4mm}
+.kpi{flex:1;background:#fff;border:1px solid var(--line);border-top:3mm solid var(--green);padding:4mm 3.5mm 3.5mm}
+.kpi.a{border-top-color:var(--bordeaux)}.kpi.y{border-top-color:#E6C800}
+.kpi .v{font-family:'Archivo';font-weight:800;font-size:21pt;color:var(--deep);line-height:1}
+.kpi.a .v{color:var(--bordeaux)}.kpi.y .v{color:#8a7400}
+.kpi .l{font-family:'Archivo';font-weight:600;font-size:6.5pt;color:var(--gray);text-transform:uppercase;letter-spacing:.07em;margin-top:2.2mm;line-height:1.5}
+.g2{display:table;width:100%}
+.g2 .gc{display:table-cell;width:50%;vertical-align:top;padding-right:5mm}
+.g2 .gc:last-child{padding-right:0;padding-left:5mm}
+.gc h3{font-family:'Archivo';font-weight:700;font-size:9pt;color:var(--green);text-transform:uppercase;letter-spacing:.12em;margin-bottom:3mm;padding-bottom:2mm;border-bottom:.7mm solid var(--mist)}
+.gc img{width:100%}
+/* month opener */
+.month{background:var(--deep);color:#fff;height:100%;display:flex;flex-direction:column}
+.month .top{display:flex;justify-content:space-between;padding:11mm 16mm 0;font-family:'Archivo';font-weight:600;font-size:7.5pt;letter-spacing:.3em;color:#9FC7AB;text-transform:uppercase}
+.month .ghost{font-family:'Archivo';font-weight:900;font-size:80pt;line-height:.95;letter-spacing:-.02em;padding:6mm 16mm 0;color:rgba(255,255,255,.10)}
+.month .title{padding:1mm 16mm 0}
+.month .title h2{font-family:'Marcellus';font-weight:400;font-size:32pt;color:#fff}
+.month .title .fr{font-family:'Archivo';font-weight:500;font-size:10.5pt;color:#BFE3CC;margin-top:1.5mm}
+.month .count{display:inline-block;margin:5mm 16mm 0;background:var(--yellow);color:var(--deep);font-family:'Archivo';font-weight:800;font-size:9.5pt;letter-spacing:.12em;text-transform:uppercase;padding:2.2mm 5.5mm}
+.month .events{flex:1;padding:7mm 16mm 0;overflow:hidden}
+.month .events h4{font-family:'Archivo';font-weight:700;font-size:8.5pt;letter-spacing:.24em;color:var(--yellow);text-transform:uppercase;margin-bottom:4mm}
+.month .ev{display:flex;gap:5mm;padding:3.8mm 0;border-bottom:.4mm solid rgba(255,255,255,.14)}
+.month .ev:last-child{border-bottom:none}
+.month .ev .d{font-family:'Archivo';font-weight:700;font-size:8pt;color:var(--yellow);width:32mm;flex-shrink:0;padding-top:1mm}
+.month .ev .t{font-family:'Source Serif 4';font-size:10.5pt;color:#EAF4EE;line-height:1.45}
+.month .photo{height:56mm;width:100%;object-fit:cover;object-position:center 35%;border-top:1.2mm solid var(--yellow)}
+.month .pfoot{padding:4mm 16mm 8mm;display:flex;justify-content:space-between;font-family:'Archivo';font-size:7pt;color:#9FC7AB;letter-spacing:.1em;text-transform:uppercase}
+/* fiches (newsletter-style activity cards) */
+.fpage{padding:21mm 14mm 10mm}
+.fpage .fhead{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1.6mm solid var(--green);padding-bottom:3mm;margin-bottom:4mm}
+.fpage .fhead .m{font-family:'Archivo';font-weight:800;font-size:15pt;color:var(--deep);text-transform:uppercase;letter-spacing:.04em}
+.fpage .fhead .c{font-family:'Archivo';font-weight:600;font-size:8pt;color:var(--gray);letter-spacing:.14em;text-transform:uppercase}
+.fiche{border:1px solid var(--line);border-left:1.2mm solid var(--green2);margin-bottom:5mm;page-break-inside:avoid}
+.fiche .top{display:flex;gap:0;border-bottom:.5mm solid var(--line)}
+.fiche .meta{flex:1;display:flex}
+.fiche .meta .c{flex:1;padding:3.2mm 3.5mm;border-right:.4mm solid var(--line)}
+.fiche .meta .c:last-child{border-right:none}
+.fiche .meta .k{font-family:'Archivo';font-weight:700;font-size:6pt;letter-spacing:.16em;color:var(--green);text-transform:uppercase;margin-bottom:1mm}
+.fiche .meta .v{font-family:'Source Serif 4';font-size:8.8pt;line-height:1.45;color:var(--char)}
+.fiche .tag{background:var(--green);color:#fff;font-family:'Archivo';font-weight:700;font-size:6.2pt;letter-spacing:.1em;text-transform:uppercase;padding:1.5mm 3mm;display:flex;align-items:center;white-space:nowrap}
+.fiche .body{padding:3.5mm 4mm}
+.fiche .act{font-family:'Archivo';font-weight:700;font-size:10pt;color:var(--deep);line-height:1.35;margin-bottom:2mm}
+.fiche .obj{font-family:'Source Serif 4';font-size:8.3pt;font-style:italic;color:#44514B;line-height:1.5;border-left:2mm solid var(--yellow);padding-left:2.8mm}
+.fiche .obj b{font-style:normal;font-family:'Archivo';font-weight:700;font-size:6.8pt;letter-spacing:.14em;text-transform:uppercase;color:var(--green);display:block;margin-bottom:.8mm}
+/* photo strip on fiche pages */
+.strip{display:flex;gap:3.5mm;margin-top:4mm}
+.strip figure{flex:1}
+.strip img{width:100%;height:46mm;object-fit:cover;display:block}
+.strip figcaption{font-family:'Archivo';font-size:6.5pt;color:var(--gray);padding-top:1.6mm;line-height:1.4}
+/* others list */
+.others{padding:21mm 16mm 10mm}
+.others table{width:100%;border-collapse:collapse}
+.others td{padding:2.6mm 2mm;border-bottom:.4mm solid var(--line);vertical-align:top;font-size:9.3pt;line-height:1.45}
+.others td.d{width:34mm;font-family:'Archivo';font-weight:600;font-size:8pt;color:var(--green);white-space:nowrap}
+.others td.a{font-family:'Archivo';font-weight:600;font-size:9pt;color:var(--deep)}
+.others td.l{width:38mm;color:#44514B;font-size:8.6pt}
+.others .cnt{font-family:'Archivo';font-weight:700;font-size:8pt;color:var(--bordeaux);letter-spacing:.1em;text-transform:uppercase;margin-bottom:3mm}
+/* ongoing month */
+.ongoing{background:linear-gradient(160deg,#0B3D24,#1E7A44);color:#fff;height:100%;display:flex;flex-direction:column}
+.ongoing .inner{padding:20mm 18mm;flex:1;overflow:hidden}
+.ongoing h2{font-family:'Marcellus';font-size:30pt;color:#fff}
+.ongoing .tag{display:inline-block;background:var(--yellow);color:var(--deep);font-family:'Archivo';font-weight:800;font-size:8.5pt;letter-spacing:.14em;text-transform:uppercase;padding:2mm 5mm;margin:5mm 0}
+.ongoing table{width:100%;border-collapse:collapse}
+.ongoing td{padding:2.4mm 2mm;border-bottom:.4mm solid rgba(255,255,255,.16);font-size:9.3pt;line-height:1.45;color:#EAF4EE;vertical-align:top}
+.ongoing td.d{width:32mm;font-family:'Archivo';font-weight:700;font-size:8pt;color:var(--yellow);white-space:nowrap}
+.ongoing td.a{font-family:'Archivo';font-weight:600;font-size:9pt;color:#fff}
+.ongoing .note{margin-top:6mm;font-size:9.5pt;color:#BFE3CC;font-style:italic}
+.small{font-size:8.5pt;line-height:1.65;color:#44514B}
+/* staff mobilisation bars */
+.sbar{display:flex;align-items:center;gap:3mm;margin:2.2mm 0}
+.sbar .n{width:50mm;font-family:'Archivo';font-weight:600;font-size:7.6pt;color:var(--char);line-height:1.3;flex-shrink:0}
+.sbar .track{flex:1;height:3.6mm;background:var(--mist);position:relative}
+.sbar .fill{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,var(--green),var(--green2))}
+.sbar .fill.b{background:linear-gradient(90deg,var(--bordeaux),#B04A5E)}
+.sbar .c{width:9mm;text-align:right;font-family:'Archivo';font-weight:800;font-size:8.5pt;color:var(--deep);flex-shrink:0}
+.sig{font-family:'Archivo';font-weight:700;font-size:8pt;color:var(--green);letter-spacing:.16em;text-transform:uppercase;margin:5mm 0 2mm}
+</style>
+</head>
+<body>
+
+
+<div class="page cover">
+  <img class="coverbg" src="static/images/book/nl_p25_x387.png" alt="">
+  <div class="cover-shade"></div>
+  <div class="mast">
+    <img src="static/logos/au-iapsc-logo.png" alt="AU-IAPSC">
+    <div class="org">Inter-African Phytosanitary Council<small>Conseil Phytosanitaire Interafricain — Union Africaine</small></div>
+  </div>
+  <div class="hero">
+    <div class="kicker">Activités · Missions · Partenariats</div>
+    <h1>Calendrier<br><em>annuel</em> des activités</h1>
+    <div class="sub">Une année de mobilisation pour la santé végétale en Afrique — édition 2026</div>
+    <div class="period">Février — Octobre 2026</div>
+    <div class="badge">Novembre 2026 — mois en cours</div>
+  </div>
+  <div class="cover-stats">
+    <div class="cstat"><div class="v">112</div><div class="l">Activités réalisées<br>fév. → oct.</div></div>
+    <div class="cstat"><div class="v">9</div><div class="l">Mois documentés<br>matrices mensuelles</div></div>
+    <div class="cstat"><div class="v">14+</div><div class="l">Pays / lieux<br>couverts</div></div>
+    <div class="cstat"><div class="v">52</div><div class="l">Activités majeures<br>en fiches</div></div>
+  </div>
+  <div class="foot">
+    <div class="edition">AU-IAPSC — Agriculture, Rural Development,<br>Blue Economy &amp; Sustainable Environment (ARBE)<br>Yaoundé, Cameroun · 2026</div>
+  </div>
+</div>
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Livre des activités<br>2026</div>
+  </div>
+  <div class="ph">
+    <div class="kick">L'institution</div>
+    <h2 class="pt">L'AU-IAPSC en bref</h2>
+    <div class="rule"></div>
+    <div class="cols2">
+      <div class="col txt">
+        <p>L'<strong>Inter-African Phytosanitary Council</strong> (AU-IAPSC), rattaché au Département de l'Agriculture, du Développement rural, de l'Économie bleue et de l'Environnement durable (ARBE) de la Commission de l'Union africaine, est le conseil phytosanitaire continental chargé de coordonner la protection des végétaux en Afrique.</p>
+        <p>Son mandat couvre la sécurité phytosanitaire, l'harmonisation des mesures aux frontières, le renforcement des capacités des organisations nationales de protection des végétaux (ONPV) et la promotion des normes internationales, notamment la Convention internationale pour la protection des végétaux (CIPV).</p>
+        <p>En 2025, l'AU-IAPSC a documenté <strong>plus de 200 activités de coordination</strong>, dont plus de 45&nbsp;% conduites à distance, et a reçu un financement du WTO-STDF pour un projet sur la gestion du bunchy top de la bananier dans 10 États membres.</p>
+      </div>
+      <div class="col">
+        <div class="box">
+          <h4>Informations institutionnelles</h4>
+          <ul>
+            <li>Siège : Yaoundé, Cameroun</li>
+            <li>Département : AU-ARBE</li>
+            <li>Représentation : Union africaine auprès de la CIPV</li>
+            <li>Programmes clés : APP, STDF-BBTD, GreenPass</li>
+          </ul>
+        </div>
+        <div class="box b">
+          <h4>Mission</h4>
+          <p>Contribuer à un « système phytosanitaire africain robuste » garantissant la sécurité alimentaire et le commerce des végétaux sur le continent.</p>
+        </div>
+        <figure class="ph"><img src="static/images/book/book_nl_p02_x9.png" alt=""><figcaption>Réunion institutionnelle — archives AU-IAPSC</figcaption></figure>
+      </div>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026</span><span>02</span></div>
+  </div>
+</div>
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Livre des activités<br>2026</div>
+  </div>
+  <div class="toc">
+    <div class="kick">Navigation</div>
+    <h2 class="pt" style="font-size:26pt">Sommaire</h2>
+    <div class="rule"></div>
+    <div class="part"><div class="t">Vue d'ensemble</div><div class="d">Le calendrier annuel en bref · chiffres clés</div></div>
+    <div class="part"><div class="t">Tableau de bord statistique</div><div class="d">Activités, pays, modalités, types — février à octobre</div></div>
+    <div class="part"><div class="t">Les activités mois par mois</div>
+      
+      <div class="chap"><b>Février</b>8 activités — 6 présentées</div>
+      
+      <div class="chap"><b>Mars</b>19 activités — 6 présentées</div>
+      
+      <div class="chap"><b>Avril</b>19 activités — 6 présentées</div>
+      
+      <div class="chap"><b>Mai</b>9 activités — 6 présentées</div>
+      
+      <div class="chap"><b>Juin</b>5 activités — 4 présentées</div>
+      
+      <div class="chap"><b>Juillet</b>20 activités — 6 présentées</div>
+      
+      <div class="chap"><b>Août</b>13 activités — 6 présentées</div>
+      
+      <div class="chap"><b>Septembre</b>7 activités — 6 présentées</div>
+      
+      <div class="chap"><b>Octobre</b>12 activités — 6 présentées</div>
+      
+      <div class="chap"><b>Novembre</b>17 activités — mois en cours</div>
+    </div>
+    <div class="part"><div class="t">Faits marquants &amp; thématiques</div><div class="d">Les rendez-vous qui ont structuré l'année</div></div>
+    <div class="part"><div class="t">Partenaires &amp; coopération institutionnelle</div><div class="d">CIPV, FAO, STDF, CAADP, AfCFTA et autres</div></div>
+    <div class="part"><div class="t">Perspectives &amp; crédits</div><div class="d">État des lieux, notes éditoriales, sources</div></div>
+  </div>
+  <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026</span><span>03</span></div>
+</div>
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Livre des activités<br>2026</div>
+  </div>
+  <div class="ph">
+    <div class="kick">Introduction</div>
+    <h2 class="pt">Une année de mobilisation phytosanitaire</h2>
+    <div class="rule"></div>
+    <div class="txt">
+      <p>Ce livre présente le <strong>calendrier annuel des activités</strong> de l'AU-IAPSC pour l'année 2026. Sur la période <strong>février–octobre</strong>, <strong>112 activités</strong> ont été documentées et réalisées : instances de gouvernance, ateliers techniques, missions de terrain, consultations internationales et événements de sensibilisation. <strong>Novembre 2026 est un mois en cours</strong> : ses activités programmées sont présentées en fin d'ouvrage.</p>
+      <p>L'année s'ouvre à <strong>Entebbe (Ouganda)</strong> par le 19ᵉ Steering Committee et le lancement du projet STDF sur le bunchy top de la bananier, avant le rendez-vous continental de <strong>mars</strong> : la 20ᵉ Conférence des Parties (CPM 20) de la CIPV à Rome, le sous-comité SPS de l'AfCFTA à Nairobi et le chantier de domestication des lignes directrices de La Havane à Yaoundé.</p>
+      <p>Le second semestre confirme l'ancrage continental du mandat : <strong>Phase 3 du Programme Phytosanitaire Africain</strong> à Addis-Abeba en juillet, <strong>atelier régional CIPV à Libreville</strong> et <strong>Forum Alimentaire Africain à Kigali</strong> en août, puis une vague de consultations semences et partenariats — STDF à Genève, CAADP à Dar es Salaam — jusqu'au calendrier de fin d'année.</p>
+    </div>
+    <div class="pull"><p>« La santé des végétaux est un pilier de la souveraineté alimentaire africaine. »</p><div class="who">— Esprit de la délégation AU-IAPSC, atelier CIPV Libreville</div></div>
+    <div class="g2">
+      <div class="gc"><h3>Chiffres clés — fév. à oct. 2026</h3>
+        <table style="width:100%;border-collapse:collapse;font-size:9.5pt">
+          <tr><td style="padding:2mm 0;border-bottom:.4mm solid var(--line)"><b>112</b> activités réalisées</td><td style="text-align:right;border-bottom:.4mm solid var(--line)">9 mois documentés</td></tr>
+          <tr><td style="padding:2mm 0;border-bottom:.4mm solid var(--line)"><b>14+</b> pays / lieux</td><td style="text-align:right;border-bottom:.4mm solid var(--line)">47 à distance</td></tr>
+          <tr><td style="padding:2mm 0;border-bottom:.4mm solid var(--line)"><b>52</b> activités présentées en fiches</td><td style="text-align:right;border-bottom:.4mm solid var(--line)">17 prévues en novembre</td></tr>
+          <tr><td style="padding:2mm 0"><b>Calendrier</b> annuel</td><td style="text-align:right">édition 2026</td></tr>
+        </table>
+      </div>
+      <div class="gc"><h3>Comment lire ce livre</h3>
+        <p class="small">Chaque mois fait l'objet d'une ouverture suivie des fiches des <strong>activités majeures</strong> (date, lieu, personnel, activité, objectifs) et d'une liste des autres activités documentées. Toutes les activités listées ont eu lieu ; novembre est signalé « en cours ». Les objectifs sont des reformulations éditoriales issues des matrices et des documents de référence.</p>
+      </div>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026</span><span>04</span></div>
+  </div>
+</div>
+
+
+<div class="page" style="background:var(--pale)">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Tableau de bord<br>février — octobre 2026</div>
+  </div>
+  <div class="ph">
+    <div class="kick">Tableau de bord</div>
+    <h2 class="pt">L'année en chiffres</h2>
+    <div class="rule"></div>
+    <div class="kpis">
+      <div class="kpi"><div class="v">112</div><div class="l">Activités réalisées<br>fév. → oct. 2026</div></div>
+      <div class="kpi a"><div class="v">14+</div><div class="l">Pays / lieux distincts</div></div>
+      <div class="kpi"><div class="v">65</div><div class="l">En présentiel</div></div>
+      <div class="kpi y"><div class="v">47</div><div class="l">À distance<br>(en ligne + hybride)</div></div>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="v">17</div><div class="l">Ateliers &amp; formations</div></div>
+      <div class="kpi a"><div class="v">47</div><div class="l">Réunions &amp; gouvernance</div></div>
+      <div class="kpi"><div class="v">3</div><div class="l">Missions &amp; voyages</div></div>
+      <div class="kpi y"><div class="v">93</div><div class="l">Activités avec<br>personnel désigné</div></div>
+    </div>
+    <div class="g2">
+      <div class="gc"><h3>Activités par mois</h3><img src="static/charts/activities_per_month.png"></div>
+      <div class="gc"><h3>Modalités de tenue</h3><img src="static/charts/format_donut.png"></div>
+    </div>
+    <div class="g2" style="margin-top:5mm">
+      <div class="gc"><h3>Activités par type</h3><img src="static/charts/types_bars.png"></div>
+      <div class="gc"><h3>Temps forts de l'année</h3>
+        <p class="small"><b>Mars</b> — CPM 20 à Rome, AfCFTA-SPS à Nairobi.<br><b>Juillet</b> — Phase 3 de l'APP à Addis-Abeba, WAVE à Abuja.<br><b>Août</b> — Atelier régional CIPV à Libreville, AFSF à Kigali.<br><b>Septembre</b> — Conférence semences, CAADP à Harare.<br><b>Octobre</b> — Consultations semences, rendez-vous CAADP.</p>
+      </div>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026</span><span>05</span></div>
+  </div>
+</div>
+
+
+<div class="page" style="background:var(--pale)">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Tableau de bord<br>février — octobre 2026</div>
+  </div>
+  <div class="ph">
+    <div class="kick">Tableau de bord</div>
+    <h2 class="pt" style="font-size:17pt">Rayonnement géographique &amp; thématique</h2>
+    <div class="rule"></div>
+    <div class="g2">
+      <div class="gc"><h3>Principaux pays / lieux</h3><img src="static/charts/top_countries.png">
+        <h3 style="margin-top:5mm">Personnel mobilisé</h3>
+        
+        
+        <div class="sbar"><div class="n">Coordinateur / coordination</div><div class="track"><div class="fill" style="width:100.0%"></div></div><div class="c">55</div></div>
+        
+        <div class="sbar"><div class="n">SSO-P</div><div class="track"><div class="fill" style="width:58.2%"></div></div><div class="c">32</div></div>
+        
+        <div class="sbar"><div class="n">SSO-E</div><div class="track"><div class="fill" style="width:40.0%"></div></div><div class="c">22</div></div>
+        
+        <div class="sbar"><div class="n">Équipe complète / staff concerné</div><div class="track"><div class="fill" style="width:29.1%"></div></div><div class="c">16</div></div>
+        
+        <div class="sbar"><div class="n">Secrétariat &amp; administration</div><div class="track"><div class="fill" style="width:9.1%"></div></div><div class="c">5</div></div>
+        
+        
+        <div class="sbar"><div class="n">Autres fonctions / partenaires / nommés</div><div class="track"><div class="fill b" style="width:12.7%"></div></div><div class="c">7</div></div>
+        
+        <p class="small" style="margin-top:3mm">Fonctions désignées dans les matrices — une activité peut mobiliser plusieurs fonctions.</p>
+      </div>
+      <div class="gc">
+        <h3>Répartition mensuelle détaillée</h3>
+        <table style="width:100%;border-collapse:collapse;font-size:9.5pt">
+          
+          <tr><td style="padding:2.2mm 0;border-bottom:.4mm solid var(--line)"><b>Février</b></td><td style="text-align:right;border-bottom:.4mm solid var(--line)">8 activités</td></tr>
+          
+          <tr><td style="padding:2.2mm 0;border-bottom:.4mm solid var(--line)"><b>Mars</b></td><td style="text-align:right;border-bottom:.4mm solid var(--line)">19 activités</td></tr>
+          
+          <tr><td style="padding:2.2mm 0;border-bottom:.4mm solid var(--line)"><b>Avril</b></td><td style="text-align:right;border-bottom:.4mm solid var(--line)">19 activités</td></tr>
+          
+          <tr><td style="padding:2.2mm 0;border-bottom:.4mm solid var(--line)"><b>Mai</b></td><td style="text-align:right;border-bottom:.4mm solid var(--line)">9 activités</td></tr>
+          
+          <tr><td style="padding:2.2mm 0;border-bottom:.4mm solid var(--line)"><b>Juin</b></td><td style="text-align:right;border-bottom:.4mm solid var(--line)">5 activités</td></tr>
+          
+          <tr><td style="padding:2.2mm 0;border-bottom:.4mm solid var(--line)"><b>Juillet</b></td><td style="text-align:right;border-bottom:.4mm solid var(--line)">20 activités</td></tr>
+          
+          <tr><td style="padding:2.2mm 0;border-bottom:.4mm solid var(--line)"><b>Août</b></td><td style="text-align:right;border-bottom:.4mm solid var(--line)">13 activités</td></tr>
+          
+          <tr><td style="padding:2.2mm 0;border-bottom:.4mm solid var(--line)"><b>Septembre</b></td><td style="text-align:right;border-bottom:.4mm solid var(--line)">7 activités</td></tr>
+          
+          <tr><td style="padding:2.2mm 0;border-bottom:.4mm solid var(--line)"><b>Octobre</b></td><td style="text-align:right;border-bottom:.4mm solid var(--line)">12 activités</td></tr>
+          
+          <tr><td style="padding:2.2mm 0"><b>Novembre <span style="font-size:7pt;color:var(--bordeaux)">(en cours)</span></b></td><td style="text-align:right">17 prévues</td></tr>
+        </table>
+        <h3 style="margin-top:5mm">Couverture</h3>
+        <p class="small">Rayonnement continental : Afrique de l'Ouest à l'Afrique australe, Afrique centrale et septentrionale, et rendez-vous internationaux (Rome, Genève, Séoul, Mexico, Kingston). Une part significative des travaux se déroule à distance, au siège de Yaoundé ou dans les capitales concernées.</p>
+      </div>
+    </div>
+    <div class="strip" style="margin-top:6mm">
+      <figure><img src="static/images/book/book_nl_p07_x97.png"><figcaption>Atelier — archives AU-IAPSC</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p15_x242.png"><figcaption>Réunion technique — archives AU-IAPSC</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p27_x423.png"><figcaption>Visite de terrain — archives AU-IAPSC</figcaption></figure>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026</span><span>06</span></div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="page month">
+  <div class="top"><span>AU-IAPSC · Calendrier annuel 2026</span><span>Chapitre mensuel</span></div>
+  <div class="ghost">FÉVRIER</div>
+  <div class="title"><h2>Février 2026</h2><div class="fr">8 activités réalisées — 6 présentées en fiches</div></div>
+  <div class="count">8 activités</div>
+  <div class="events">
+    <h4>Moments clés du mois</h4>
+    
+    <div class="ev"><div class="d">17-18 February</div><div class="t">AU-IAPSC 19th Steering Committee Meeting</div></div>
+    
+    <div class="ev"><div class="d">19 February</div><div class="t">Launch of Banana Bunchy Top Disease STDF Project,</div></div>
+    
+    <div class="ev"><div class="d">20-21 February</div><div class="t">AU-IAPSC Pre-CPM 20-2006</div></div>
+    
+    <div class="ev"><div class="d">26 February 1:30 PM - 3:00 P</div><div class="t">Draft Budget Submissions and Draft Budget Ceilings for 2027,</div></div>
+    
+    <div class="ev"><div class="d">27 February 2026, 09:00 AM -</div><div class="t">Presentation of the outcome of the study by APD TOWARD COHERENT DELIVERY: ENHANCING THE COORDIN</div></div>
+    
+  </div>
+  <img class="photo" src="static/images/book/book_nl_p03_x30.png" alt="">
+  <div class="pfoot"><span>Février 2026</span><span>Calendrier annuel</span></div>
+</div>
+
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Février 2026<br>Fiches activités</div>
+  </div>
+  <div class="fpage">
+    <div class="fhead"><div class="m">Février 2026</div><div class="c">Activités majeures — 1/2</div></div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">17-18 February</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Entebbe-Uganda — Ouganda</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator, ; SSO-P ; SSO-E ; Admin Assistant ; Secretary and Finance Assistant</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">AU-IAPSC 19th Steering Committee Meeting</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Assurer la gouvernance et le pilotage stratégique de l&#39;AU-IAPSC.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">19 February</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Entebbe-Uganda — Ouganda</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">—</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Launch of Banana Bunchy Top Disease STDF Project,</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Renforcer la coordination africaine de la gestion du bunchy top de la bananier à travers le projet STDF.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">20-21 February</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Entebbe-Uganda — Ouganda</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">—</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">AU-IAPSC Pre-CPM 20-2006</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Porter la voix de l&#39;Afrique à la Conférence des Parties de la CIPV et contribuer à l&#39;agenda phytosanitaire mondial.</div>
+      </div>
+    </div>
+    
+    <div class="strip">
+      
+      
+      <figure><img src="static/images/book/book_nl_p02_x9.png"><figcaption>Archives AU-IAPSC — Février</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p03_x30.png"><figcaption>Archives AU-IAPSC — Février</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p04_x57.png"><figcaption>Archives AU-IAPSC — Février</figcaption></figure>
+      
+      
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Février</span><span>Fév.</span></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Février 2026<br>Fiches activités</div>
+  </div>
+  <div class="fpage">
+    <div class="fhead"><div class="m">Février 2026</div><div class="c">Activités majeures — 2/2</div></div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">26 February 1:30 PM - 3:00 PM</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Online</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">En ligne</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">—</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Draft Budget Submissions and Draft Budget Ceilings for 2027,</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Contribuer à l&#39;harmonisation phytosanitaire régionale et au partage d&#39;expériences.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">27 February 2026, 09:00 AM - 10:30 AM</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Non précisé</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">—</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Presentation of the outcome of the study by APD TOWARD COHERENT DELIVERY: ENHANCING THE COORDINATION MECHANISM FOR CAADP KAMPALA IMPLEMENTATION (2026-2035)</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Soutenir la domestisation et la mise en œuvre des lignes directrices du CAADP pour l&#39;agriculture africaine.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">26/02 ; 12:30-14:00</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Non précisé</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator ; SSO-P ; SSO-E</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Consortium meeting</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Renforcer la coordination et la gouvernance institutionnelle de l&#39;AU-IAPSC.</div>
+      </div>
+    </div>
+    
+    <div class="strip">
+      
+      
+      <figure><img src="static/images/book/book_nl_p05_x80.png"><figcaption>Archives AU-IAPSC — Février</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p07_x97.png"><figcaption>Archives AU-IAPSC — Février</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p07_x99.png"><figcaption>Archives AU-IAPSC — Février</figcaption></figure>
+      
+      
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Février</span><span>Fév.</span></div>
+  </div>
+</div>
+
+
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Février 2026<br>Autres activités</div>
+  </div>
+  <div class="others">
+    <div class="cnt">Autres activités documentées en février 2026 — 2</div>
+    <p class="small" style="margin-bottom:5mm">Toutes les activités du calendrier ont eu lieu. Les fiches détaillées sont consacrées aux activités majeures du mois ; les entrées ci-dessous complètent le calendrier février 2026.</p>
+    <table>
+      
+      <tr>
+        <td class="d">24 February 2026, 2:00- 3:</td>
+        <td class="a">APP Side Session Dry Run,</td>
+        <td class="l">Online</td>
+      </tr>
+      
+      <tr>
+        <td class="d">26/02 ; 10:00-11:00</td>
+        <td class="a">WP9 Meeting Afropeace</td>
+        <td class="l">Online</td>
+      </tr>
+      
+    </table>
+    <div class="strip">
+      <figure><img src="static/images/book/book_nl_p05_x80.png"><figcaption>Archives AU-IAPSC — Février</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p13_x188.png"><figcaption>Archives AU-IAPSC — Février</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p24_x381.png"><figcaption>Archives AU-IAPSC — Février</figcaption></figure>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Février</span><span>Fév.</span></div>
+  </div>
+</div>
+
+
+
+<div class="page month">
+  <div class="top"><span>AU-IAPSC · Calendrier annuel 2026</span><span>Chapitre mensuel</span></div>
+  <div class="ghost">MARS</div>
+  <div class="title"><h2>Mars 2026</h2><div class="fr">19 activités réalisées — 6 présentées en fiches</div></div>
+  <div class="count">19 activités</div>
+  <div class="events">
+    <h4>Moments clés du mois</h4>
+    
+    <div class="ev"><div class="d">Jeudi 5 ; 10:00-11:30</div><div class="t">Reunion avec les ONPVs sur le theme : FINALISATION DE LA PRE-CPM 20, APP...</div></div>
+    
+    <div class="ev"><div class="d">Monday 09-Friday 13</div><div class="t">CPM 20-2026</div></div>
+    
+    <div class="ev"><div class="d">Tuesday,10</div><div class="t">Virtual Presentation on the CAADP Biennial Review Cycle and Process,</div></div>
+    
+    <div class="ev"><div class="d">Monday 16 to Thursday 19</div><div class="t">AfCFTA Secretariat Fifth (5th) Meeting of the Sub-Committee on Sanitary and Phytosanitary Measu</div></div>
+    
+    <div class="ev"><div class="d">Tuesday 17–Thursday 19</div><div class="t">High-Level Dialogue and Workshop on Dissemination and Implementation Planning for the CAADP Kam</div></div>
+    
+  </div>
+  <img class="photo" src="static/images/book/book_nl_p07_x97.png" alt="">
+  <div class="pfoot"><span>Mars 2026</span><span>Calendrier annuel</span></div>
+</div>
+
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Mars 2026<br>Fiches activités</div>
+  </div>
+  <div class="fpage">
+    <div class="fhead"><div class="m">Mars 2026</div><div class="c">Activités majeures — 1/2</div></div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Jeudi 5 ; 10:00-11:30</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Online (Teams)</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">En ligne</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Concerned staff</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Reunion avec les ONPVs sur le theme : FINALISATION DE LA PRE-CPM 20, APP...</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Porter la voix de l&#39;Afrique à la Conférence des Parties de la CIPV et contribuer à l&#39;agenda phytosanitaire mondial.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Monday 09-Friday 13</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Rome, Italy and Online — Italie</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">En ligne</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator ; SSO-P ; SSO-E</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">CPM 20-2026</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Porter la voix de l&#39;Afrique à la Conférence des Parties de la CIPV et contribuer à l&#39;agenda phytosanitaire mondial.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Tuesday,10</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Online</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">En ligne</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Virtual Presentation on the CAADP Biennial Review Cycle and Process,</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Soutenir la domestisation et la mise en œuvre des lignes directrices du CAADP pour l&#39;agriculture africaine.</div>
+      </div>
+    </div>
+    
+    <div class="strip">
+      
+      
+      <figure><img src="static/images/book/book_nl_p08_x108.png"><figcaption>Archives AU-IAPSC — Mars</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p10_x138.png"><figcaption>Archives AU-IAPSC — Mars</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p11_x149.png"><figcaption>Archives AU-IAPSC — Mars</figcaption></figure>
+      
+      
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Mars</span><span>Mar.</span></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Mars 2026<br>Fiches activités</div>
+  </div>
+  <div class="fpage">
+    <div class="fhead"><div class="m">Mars 2026</div><div class="c">Activités majeures — 2/2</div></div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Monday 16 to Thursday 19</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Nairobi, Republic of Kenya ; Luiza</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">SSO-P</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">AfCFTA Secretariat Fifth (5th) Meeting of the Sub-Committee on Sanitary and Phytosanitary Measures (SPS),</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Renforcer la coordination et la gouvernance institutionnelle de l&#39;AU-IAPSC.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Tuesday 17–Thursday 19</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Yaoundé, Cameroon — Cameroun</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">—</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">High-Level Dialogue and Workshop on Dissemination and Implementation Planning for the CAADP Kampala Implementation Guidelines and Domestication Tools,</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Soutenir la domestisation et la mise en œuvre des lignes directrices du CAADP pour l&#39;agriculture africaine.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Tuesday 24-Friday 27</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Windhoek, Namibia — Namibie</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator ; SSO-P</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Continental Technical Workshop on the CAADP Kampala Results Framework and Biennial Review Indicators</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Soutenir la domestisation et la mise en œuvre des lignes directrices du CAADP pour l&#39;agriculture africaine.</div>
+      </div>
+    </div>
+    
+    <div class="strip">
+      
+      
+      <figure><img src="static/images/book/book_nl_p12_x174.png"><figcaption>Archives AU-IAPSC — Mars</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p12_x175.png"><figcaption>Archives AU-IAPSC — Mars</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p13_x188.png"><figcaption>Archives AU-IAPSC — Mars</figcaption></figure>
+      
+      
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Mars</span><span>Mar.</span></div>
+  </div>
+</div>
+
+
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Mars 2026<br>Autres activités</div>
+  </div>
+  <div class="others">
+    <div class="cnt">Autres activités documentées en mars 2026 — 13</div>
+    <p class="small" style="margin-bottom:5mm">Toutes les activités du calendrier ont eu lieu. Les fiches détaillées sont consacrées aux activités majeures du mois ; les entrées ci-dessous complètent le calendrier mars 2026.</p>
+    <table>
+      
+      <tr>
+        <td class="d">Wednesday 4th ; 3 pm</td>
+        <td class="a">Meeting with HR BP for AU-IAPSC</td>
+        <td class="l">AU-IAPSC Hall</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Wednesday 18 ; at 10 am</td>
+        <td class="a">Staff Monthly Meeting mars 2026 à 10.00</td>
+        <td class="l">Salle de Conférence du CPI</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Monday 24 ; 3 pm</td>
+        <td class="a">Cucurbits and their pests</td>
+        <td class="l">Online : Zoom</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Wednesday 25 2.30-5.30 PM</td>
+        <td class="a">Interview for PCA and Pest Early Warning System,</td>
+        <td class="l">Online</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Friday, 27,  11:00 AM-12:3</td>
+        <td class="a">International Organizing Committee IPPC Regional Workshops Africa (Meeting 2) ; (2nd coordination meeting of the IPPC Regional Workshop for Africa to be held from 4 to 7 August 2026, Libreville -Gabon)</td>
+        <td class="l">Online-Zoom</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Friday 27, ; 09:00 -09:30 </td>
+        <td class="a">Courtesy visit of Mr David Beer, CEO, TradeMark Africa at AU-IAPSC</td>
+        <td class="l">AU-IAPSC Conference Hall</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Monday 30 11:00-12:00.</td>
+        <td class="a">Continental Biopesticides Guidelines Workshop preparation (13-15 April 2026 in Nairobi)  (CABI + IAPSC)</td>
+        <td class="l">Online-Teams</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Monday 30 12:30-13:00</td>
+        <td class="a">Form A_TEMPLATE_HEU_ALICE filled P Brat.docx ; ( Karl H. Thunes + IAPSC : The filled form A template for CIRAD for future projects&#39;s partner…)</td>
+        <td class="l">Online-Teams</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Monday 30 13:00-15:00.</td>
+        <td class="a">VIRTUAL: All Directors Meeting - 30 March 2026 at 15hrs (Addis time/GMT+3)</td>
+        <td class="l">Online-Zoom</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Wednesday 08 April 2026 14</td>
+        <td class="a">Follow up - collaboration between CFIA and AU-IAPSC</td>
+        <td class="l">Online-Teams</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Jeudi 09 April 2026 13-17.</td>
+        <td class="a">Assemblée Générale Croplife Cameroun</td>
+        <td class="l">Salle de Conférence de l’UA/CPI</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Lun 13/04/2026 à Ven 17/04</td>
+        <td class="a">Biopesticide Guideline Writeshop</td>
+        <td class="l">None</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Jeudi 09 avril</td>
+        <td class="a">Assemblée Générale Croplife</td>
+        <td class="l">Salle de Conférence du CPI</td>
+      </tr>
+      
+    </table>
+    <div class="strip">
+      <figure><img src="static/images/book/book_nl_p11_x149.png"><figcaption>Archives AU-IAPSC — Mars</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p19_x292.png"><figcaption>Archives AU-IAPSC — Mars</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p29_x453.png"><figcaption>Archives AU-IAPSC — Mars</figcaption></figure>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Mars</span><span>Mar.</span></div>
+  </div>
+</div>
+
+
+
+<div class="page month">
+  <div class="top"><span>AU-IAPSC · Calendrier annuel 2026</span><span>Chapitre mensuel</span></div>
+  <div class="ghost">AVRIL</div>
+  <div class="title"><h2>Avril 2026</h2><div class="fr">19 activités réalisées — 6 présentées en fiches</div></div>
+  <div class="count">19 activités</div>
+  <div class="events">
+    <h4>Moments clés du mois</h4>
+    
+    <div class="ev"><div class="d">Tuesday, April 7, 10:00 AM-1</div><div class="t">IAPSC Staff Monthly Meeting</div></div>
+    
+    <div class="ev"><div class="d">Jeudi 09 ; 13-17.00</div><div class="t">Assemblée Générale Croplife Cameroun</div></div>
+    
+    <div class="ev"><div class="d">Monday 13 to Wednesday  15</div><div class="t">Continental Biopesticides Guidelines Write-shop</div></div>
+    
+    <div class="ev"><div class="d">Thursday 16-Friday 17</div><div class="t">Experience Sharing on National, Regional &amp; International Policies related to Pesticides of conc</div></div>
+    
+    <div class="ev"><div class="d">Jeudi  30 ; 10:00</div><div class="t">Invitation MINADER.</div></div>
+    
+  </div>
+  <img class="photo" src="static/images/book/book_nl_p10_x138.png" alt="">
+  <div class="pfoot"><span>Avril 2026</span><span>Calendrier annuel</span></div>
+</div>
+
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Avril 2026<br>Fiches activités</div>
+  </div>
+  <div class="fpage">
+    <div class="fhead"><div class="m">Avril 2026</div><div class="c">Activités majeures — 1/2</div></div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Tuesday, April 7, 10:00 AM-12:00 AM.</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">IAPSC Conference Hall — Cameroun (Siège)</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">All staff</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">IAPSC Staff Monthly Meeting</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Renforcer la coordination et la gouvernance institutionnelle de l&#39;AU-IAPSC.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Jeudi 09 ; 13-17.00</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Salle de Conférence de l’UA/CPI — Cameroun (Siège)</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">—</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Assemblée Générale Croplife Cameroun</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Renforcer la coordination et la gouvernance institutionnelle de l&#39;AU-IAPSC.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Monday 13 to Wednesday  15</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Nairobi-Kenya</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator ; SSO-E ; SSO-P</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Continental Biopesticides Guidelines Write-shop</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Contribuer à l&#39;élaboration de directives continentales sur les biopesticides et les alternatives chimiques.</div>
+      </div>
+    </div>
+    
+    <div class="strip">
+      
+      
+      <figure><img src="static/images/book/book_nl_p14_x216.png"><figcaption>Archives AU-IAPSC — Avril</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p15_x242.png"><figcaption>Archives AU-IAPSC — Avril</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p17_x266.png"><figcaption>Archives AU-IAPSC — Avril</figcaption></figure>
+      
+      
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Avril</span><span>Avr.</span></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Avril 2026<br>Fiches activités</div>
+  </div>
+  <div class="fpage">
+    <div class="fhead"><div class="m">Avril 2026</div><div class="c">Activités majeures — 2/2</div></div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Thursday 16-Friday 17</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Nairobi-Kenya</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Experience Sharing on National, Regional &amp; International Policies related to Pesticides of concern</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Contribuer à la mise en œuvre du mandat phytosanitaire de l&#39;AU-IAPSC.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Jeudi  30 ; 10:00</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Salle de conférence du MINADER — Cameroun (Siège)</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordonnateur</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Invitation MINADER.</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Faire avancer les partenariats et projets de coopération phytosanitaire continentale.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Wednesday 29 ; 18:30- 20:30</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Hilton Hotel</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">32nd Celebration of Freedom Day The High Commissioner of the Republic of South Africa</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Contribuer à l&#39;harmonisation phytosanitaire régionale et au partage d&#39;expériences.</div>
+      </div>
+    </div>
+    
+    <div class="strip">
+      
+      
+      <figure><img src="static/images/book/book_nl_p18_x286.png"><figcaption>Archives AU-IAPSC — Avril</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p19_x292.png"><figcaption>Archives AU-IAPSC — Avril</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p20_x304.png"><figcaption>Archives AU-IAPSC — Avril</figcaption></figure>
+      
+      
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Avril</span><span>Avr.</span></div>
+  </div>
+</div>
+
+
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Avril 2026<br>Autres activités</div>
+  </div>
+  <div class="others">
+    <div class="cnt">Autres activités documentées en avril 2026 — 13</div>
+    <p class="small" style="margin-bottom:5mm">Toutes les activités du calendrier ont eu lieu. Les fiches détaillées sont consacrées aux activités majeures du mois ; les entrées ci-dessous complètent le calendrier avril 2026.</p>
+    <table>
+      
+      <tr>
+        <td class="d">Thursday 02 ; 15:30-16:30.</td>
+        <td class="a">3rd Biopesticides Writeshop preparation Meeting ( CABI - IAPSC)</td>
+        <td class="l">Online</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Tuesday, April 7, 8:00 AM-</td>
+        <td class="a">CPM Focus Group on Global Phytosanitary Research Coordination</td>
+        <td class="l">Online</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Tuesday 07</td>
+        <td class="a">CABI-IAPSC  pre-meeting with Participants-  in preparation for the continental biopesticides guidelines workshop (13-15 April 2026)</td>
+        <td class="l">Online</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Wednesday 08 11:00-12:00</td>
+        <td class="a">Meeting with Lava Kumar</td>
+        <td class="l">Online Microsoft Teams</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Wednesday 08,, 10:30 am or</td>
+        <td class="a">Collaborating on AU-Germany Agricultural Policy Dialogue (APD) in Cameroon</td>
+        <td class="l">Online-Teams</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Wednesday 08 14:00-15:00.</td>
+        <td class="a">Follow up - collaboration between CFIA and AU-IAPSC</td>
+        <td class="l">Online-Teams</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Monday 13-Monday 20</td>
+        <td class="a">Invitation Retreat Before the 2027 Budget Retreat Joint Sitting Sub-Committees and F15 Technical Experts</td>
+        <td class="l">Online Zoom Meeting and Multipurpose Hall at AUHQ, Addis Ababa</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Wednesday, 22 ; 12:00 to 1</td>
+        <td class="a">FAO- High-Level Webinar: Plant Health: Linking Experience, Innovation, Technology and Policy</td>
+        <td class="l">Online</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Friday 24</td>
+        <td class="a">2027 Programme Budget Consultations with Development Partners</td>
+        <td class="l">Hybrid</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Wednesday 29 11:00 - 13:00</td>
+        <td class="a">Planning Meeting for Africa Fruit Connect Event (06-08 October 2026);</td>
+        <td class="l">Online</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Wednesday 29 ; Time:15:00 </td>
+        <td class="a">Dr Steve Soh Baleba Title: Harnessing plant volatiles against an invasive pest: from eugenol detection to avoidance and fitness consequences in Drosophila suzukii</td>
+        <td class="l">Webinar:</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Mercredi 29 14:00</td>
+        <td class="a">Cérémonie Protocolaire de la 61ème Session de la Conférence des Ministres de l&#39;Education des Etats et de Gouvernements de la Francophonie (Confemen)</td>
+        <td class="l">Palais des Congrès</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Wednesday 13:00 - 14:00</td>
+        <td class="a">APP TOT Workshop Ethiopia; Preparatory Meeting;</td>
+        <td class="l">Online</td>
+      </tr>
+      
+    </table>
+    <div class="strip">
+      <figure><img src="static/images/book/book_nl_p15_x242.png"><figcaption>Archives AU-IAPSC — Avril</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p27_x423.png"><figcaption>Archives AU-IAPSC — Avril</figcaption></figure>
+      <figure><img src="static/images/book/nl_p05_x78.png"><figcaption>Archives AU-IAPSC — Avril</figcaption></figure>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Avril</span><span>Avr.</span></div>
+  </div>
+</div>
+
+
+
+<div class="page month">
+  <div class="top"><span>AU-IAPSC · Calendrier annuel 2026</span><span>Chapitre mensuel</span></div>
+  <div class="ghost">MAI</div>
+  <div class="title"><h2>Mai 2026</h2><div class="fr">9 activités réalisées — 6 présentées en fiches</div></div>
+  <div class="count">9 activités</div>
+  <div class="events">
+    <h4>Moments clés du mois</h4>
+    
+    <div class="ev"><div class="d">Monday 04 ; 07:30-15:00.</div><div class="t">2026 Mid-Year (Interim) Review Report Workshop</div></div>
+    
+    <div class="ev"><div class="d">Wednesday 06 ; 10.00</div><div class="t">AU-IAPSC Staff Monthly Meeting</div></div>
+    
+    <div class="ev"><div class="d">Thursday 09 ; 06.30 PM</div><div class="t">Europe Day</div></div>
+    
+    <div class="ev"><div class="d">Tuesday 12 ; 10.00</div><div class="t">5th International Day of Plant Health 2026 on the theme “ Plant biosecurity for food security” </div></div>
+    
+    <div class="ev"><div class="d">Friday 15 3:00 pm GMT+3</div><div class="t">Celebration of the International Day of Plant Health (IDPH)</div></div>
+    
+  </div>
+  <img class="photo" src="static/images/book/book_nl_p12_x175.png" alt="">
+  <div class="pfoot"><span>Mai 2026</span><span>Calendrier annuel</span></div>
+</div>
+
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Mai 2026<br>Fiches activités</div>
+  </div>
+  <div class="fpage">
+    <div class="fhead"><div class="m">Mai 2026</div><div class="c">Activités majeures — 1/2</div></div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Monday 04 ; 07:30-15:00.</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Small Conference Hall 1 at AUHQ,  and online — Cameroun (Siège)</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">En ligne</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Staff concerned</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">2026 Mid-Year (Interim) Review Report Workshop</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Renforcer les capacités phytosanitaires des organisations nationales et des experts africains.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Wednesday 06 ; 10.00</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">AU-IAPSC Conference Hall — Cameroun (Siège)</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">All Staff</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">AU-IAPSC Staff Monthly Meeting</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Renforcer la coordination et la gouvernance institutionnelle de l&#39;AU-IAPSC.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Thursday 09 ; 06.30 PM</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Hilton Hôtel</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Europe Day</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Contribuer à la mise en œuvre du mandat phytosanitaire de l&#39;AU-IAPSC.</div>
+      </div>
+    </div>
+    
+    <div class="strip">
+      
+      
+      <figure><img src="static/images/book/book_nl_p23_x363.png"><figcaption>Archives AU-IAPSC — Mai</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p24_x381.png"><figcaption>Archives AU-IAPSC — Mai</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p26_x406.png"><figcaption>Archives AU-IAPSC — Mai</figcaption></figure>
+      
+      
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Mai</span><span>Mai.</span></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Mai 2026<br>Fiches activités</div>
+  </div>
+  <div class="fpage">
+    <div class="fhead"><div class="m">Mai 2026</div><div class="c">Activités majeures — 2/2</div></div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Tuesday 12 ; 10.00</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">The esplanade of the Yaounde National Museum — Cameroun</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">All staff</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">5th International Day of Plant Health 2026 on the theme “ Plant biosecurity for food security” jointly organised with MINADER…</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Célébrer la Journée internationale de la santé des végétaux et sensibiliser au rôle de la phyto protection alimentaire.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Friday 15 3:00 pm GMT+3</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Online</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">En ligne</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Staff Concerned</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Celebration of the International Day of Plant Health (IDPH)</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Célébrer la Journée internationale de la santé des végétaux et sensibiliser au rôle de la phyto protection alimentaire.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Monday 18-Wednesday 20</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Addis-Ababa ; Ethiopia — Éthiopie</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Dr Bayendi Loudit Sandrine</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">The Annual Project Progress Monitoring Meeting</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Renforcer la coordination et la gouvernance institutionnelle de l&#39;AU-IAPSC.</div>
+      </div>
+    </div>
+    
+    <div class="strip">
+      
+      
+      <figure><img src="static/images/book/book_nl_p27_x423.png"><figcaption>Archives AU-IAPSC — Mai</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p27_x425.png"><figcaption>Archives AU-IAPSC — Mai</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p28_x444.png"><figcaption>Archives AU-IAPSC — Mai</figcaption></figure>
+      
+      
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Mai</span><span>Mai.</span></div>
+  </div>
+</div>
+
+
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Mai 2026<br>Autres activités</div>
+  </div>
+  <div class="others">
+    <div class="cnt">Autres activités documentées en mai 2026 — 3</div>
+    <p class="small" style="margin-bottom:5mm">Toutes les activités du calendrier ont eu lieu. Les fiches détaillées sont consacrées aux activités majeures du mois ; les entrées ci-dessous complètent le calendrier mai 2026.</p>
+    <table>
+      
+      <tr>
+        <td class="d">Tuesday, 12 15:00–17:00 (G</td>
+        <td class="a">Technical speakers and panelists in the session on “Plant Biosecurity for Food Security”).</td>
+        <td class="l">Online</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Thursday 14</td>
+        <td class="a">Strategic Invitation to AU Technical Institutions to Contribute to ATDF 2026 Flagship Publication ; TradeMark Africa (TMA) ; high-level technical consultations</td>
+        <td class="l">Online</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Friday 22 09:00-09:30</td>
+        <td class="a">Preparation Ibadan Workshop in July</td>
+        <td class="l">Online</td>
+      </tr>
+      
+    </table>
+    <div class="strip">
+      <figure><img src="static/images/book/book_nl_p23_x363.png"><figcaption>Archives AU-IAPSC — Mai</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p29_x457.png"><figcaption>Archives AU-IAPSC — Mai</figcaption></figure>
+      <figure><img src="static/images/book/nl_p15_x486.png"><figcaption>Archives AU-IAPSC — Mai</figcaption></figure>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Mai</span><span>Mai.</span></div>
+  </div>
+</div>
+
+
+
+<div class="page month">
+  <div class="top"><span>AU-IAPSC · Calendrier annuel 2026</span><span>Chapitre mensuel</span></div>
+  <div class="ghost">JUIN</div>
+  <div class="title"><h2>Juin 2026</h2><div class="fr">5 activités réalisées — 4 présentées en fiches</div></div>
+  <div class="count">5 activités</div>
+  <div class="events">
+    <h4>Moments clés du mois</h4>
+    
+    <div class="ev"><div class="d">Tuesday 09 10 Am</div><div class="t">AU-IAPSC Staff Monthly Meeting</div></div>
+    
+    <div class="ev"><div class="d">16 au 18</div><div class="t">Atelier Régional de Domestication de la Déclaration de Kamapala par les Etats Membres de la CEE</div></div>
+    
+    <div class="ev"><div class="d">30 June to 02 July</div><div class="t">STDF Working Group Meeting</div></div>
+    
+    <div class="ev"><div class="d">Wednesday 03 June</div><div class="t">APP TOT  Preparatory Meeting,</div></div>
+    
+  </div>
+  <img class="photo" src="static/images/book/book_nl_p15_x242.png" alt="">
+  <div class="pfoot"><span>Juin 2026</span><span>Calendrier annuel</span></div>
+</div>
+
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Juin 2026<br>Fiches activités</div>
+  </div>
+  <div class="fpage">
+    <div class="fhead"><div class="m">Juin 2026</div><div class="c">Activités majeures — 1/2</div></div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Tuesday 09 10 Am</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Meeting Hall — Cameroun (Siège)</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">All staff</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">AU-IAPSC Staff Monthly Meeting</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Renforcer la coordination et la gouvernance institutionnelle de l&#39;AU-IAPSC.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">16 au 18</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Libreville-Gabon</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">—</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Atelier Régional de Domestication de la Déclaration de Kamapala par les Etats Membres de la CEEAC et de Validation de la Stratégie Régional de Développement de la Riziculture en Afrique Centrale</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Renforcer les capacités phytosanitaires des organisations nationales et des experts africains.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">30 June to 02 July</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Geneva - Switzerland — Suisse</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">STDF Working Group Meeting</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Assurer la coordination du projet STDF sur la gestion du bunchy top de la bananier en Afrique.</div>
+      </div>
+    </div>
+    
+    <div class="strip">
+      
+      
+      <figure><img src="static/images/book/book_nl_p29_x453.png"><figcaption>Archives AU-IAPSC — Juin</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p29_x455.png"><figcaption>Archives AU-IAPSC — Juin</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p29_x457.png"><figcaption>Archives AU-IAPSC — Juin</figcaption></figure>
+      
+      
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Juin</span><span>Jui.</span></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Juin 2026<br>Fiches activités</div>
+  </div>
+  <div class="fpage">
+    <div class="fhead"><div class="m">Juin 2026</div><div class="c">Activités majeures — 2/2</div></div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Wednesday 03 June</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Addis Ababa-Ethiopia — Éthiopie</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">SSO-P</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">APP TOT  Preparatory Meeting,</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Déployer la Phase 3 du Programme Phytosanitaire Africain et former les formateurs des pays membres.</div>
+      </div>
+    </div>
+    
+    <div class="strip">
+      
+      
+      <figure><img src="static/images/book/nl_p02_x9.png"><figcaption>Archives AU-IAPSC — Juin</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/nl_p04_x55.png"><figcaption>Archives AU-IAPSC — Juin</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/nl_p05_x78.png"><figcaption>Archives AU-IAPSC — Juin</figcaption></figure>
+      
+      
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Juin</span><span>Jui.</span></div>
+  </div>
+</div>
+
+
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Juin 2026<br>Autres activités</div>
+  </div>
+  <div class="others">
+    <div class="cnt">Autres activités documentées en juin 2026 — 1</div>
+    <p class="small" style="margin-bottom:5mm">Toutes les activités du calendrier ont eu lieu. Les fiches détaillées sont consacrées aux activités majeures du mois ; les entrées ci-dessous complètent le calendrier juin 2026.</p>
+    <table>
+      
+      <tr>
+        <td class="d">Thursday 04 11:00-12:00.</td>
+        <td class="a">Invitation: APHEWS Contract Discussion</td>
+        <td class="l">Online</td>
+      </tr>
+      
+    </table>
+    <div class="strip">
+      <figure><img src="static/images/book/book_nl_p28_x444.png"><figcaption>Archives AU-IAPSC — Juin</figcaption></figure>
+      <figure><img src="static/images/book/nl_p09_x117.png"><figcaption>Archives AU-IAPSC — Juin</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p04_x57.png"><figcaption>Archives AU-IAPSC — Juin</figcaption></figure>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Juin</span><span>Jui.</span></div>
+  </div>
+</div>
+
+
+
+<div class="page month">
+  <div class="top"><span>AU-IAPSC · Calendrier annuel 2026</span><span>Chapitre mensuel</span></div>
+  <div class="ghost">JUILLET</div>
+  <div class="title"><h2>Juillet 2026</h2><div class="fr">20 activités réalisées — 6 présentées en fiches</div></div>
+  <div class="count">20 activités</div>
+  <div class="events">
+    <h4>Moments clés du mois</h4>
+    
+    <div class="ev"><div class="d">30 June to 02 July</div><div class="t">STDF Working Group Meeting</div></div>
+    
+    <div class="ev"><div class="d">Monday 06 July</div><div class="t">Strategic Partnership Forum for the Africa Phytosanitary Programme (APP)</div></div>
+    
+    <div class="ev"><div class="d">Tuesday 7 – Friday 10 July</div><div class="t">The Africa Phytosanitary Programme (APP) Phase 3 Train-the-Trainer Workshop</div></div>
+    
+    <div class="ev"><div class="d">Monday 13- Thursday 16 July</div><div class="t">Project Planning and First National Training of Trainers (ToT) Workshop on Banana Bunchy Top Di</div></div>
+    
+    <div class="ev"><div class="d">Monday 20th July ; 3pm EAT</div><div class="t">To review our inputs and finalize the proposal on Climate-Smart Agriculture, Blue Economy and A</div></div>
+    
+  </div>
+  <img class="photo" src="static/images/book/book_nl_p19_x292.png" alt="">
+  <div class="pfoot"><span>Juillet 2026</span><span>Calendrier annuel</span></div>
+</div>
+
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Juillet 2026<br>Fiches activités</div>
+  </div>
+  <div class="fpage">
+    <div class="fhead"><div class="m">Juillet 2026</div><div class="c">Activités majeures — 1/2</div></div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">30 June to 02 July</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Geneva - Switzerland — Suisse</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">STDF Working Group Meeting</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Assurer la coordination du projet STDF sur la gestion du bunchy top de la bananier en Afrique.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Monday 06 July</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Addis-Ababa ; Ethiopia — Éthiopie</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Strategic Partnership Forum for the Africa Phytosanitary Programme (APP)</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Déployer la Phase 3 du Programme Phytosanitaire Africain et former les formateurs des pays membres.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Tuesday 7 – Friday 10 July</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Addis-Ababa ; Ethiopia — Éthiopie</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator ; SSO-E</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">The Africa Phytosanitary Programme (APP) Phase 3 Train-the-Trainer Workshop</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Déployer la Phase 3 du Programme Phytosanitaire Africain et former les formateurs des pays membres.</div>
+      </div>
+    </div>
+    
+    <div class="strip">
+      
+      
+      <figure><img src="static/images/book/nl_p06_x89.png"><figcaption>Archives AU-IAPSC — Juillet</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/nl_p09_x117.png"><figcaption>Archives AU-IAPSC — Juillet</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/nl_p10_x142.png"><figcaption>Archives AU-IAPSC — Juillet</figcaption></figure>
+      
+      
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Juillet</span><span>Jui.</span></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Juillet 2026<br>Fiches activités</div>
+  </div>
+  <div class="fpage">
+    <div class="fhead"><div class="m">Juillet 2026</div><div class="c">Activités majeures — 2/2</div></div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Monday 13- Thursday 16 July</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Cotonou, Benin — Bénin</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator ; SSO-P, SSO-E, Acting FAO, Assistant FAO and Admin. Assistant</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Project Planning and First National Training of Trainers (ToT) Workshop on Banana Bunchy Top Disease (BBTD)</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Renforcer la coordination africaine de la gestion du bunchy top de la bananier à travers le projet STDF.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Monday 20th July ; 3pm EAT</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Online ; Microsoft Teams Meeting</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">En ligne</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator ; SSO-P, SSO-E and SEBE Staff AUC</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">To review our inputs and finalize the proposal on Climate-Smart Agriculture, Blue Economy and Agrifood Systems in support of the CAADP Kampala Strategic Objectives</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Soutenir la domestisation et la mise en œuvre des lignes directrices du CAADP pour l&#39;agriculture africaine.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Wednesday 22 – Thursday 23 July</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Abuja - Nigeria</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Plant Health Regional Convening organized by WAVE</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Contribuer à la mise en œuvre du mandat phytosanitaire de l&#39;AU-IAPSC.</div>
+      </div>
+    </div>
+    
+    <div class="strip">
+      
+      
+      <figure><img src="static/images/book/nl_p13_x190.png"><figcaption>Archives AU-IAPSC — Juillet</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/nl_p15_x486.png"><figcaption>Archives AU-IAPSC — Juillet</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/nl_p18_x284.png"><figcaption>Archives AU-IAPSC — Juillet</figcaption></figure>
+      
+      
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Juillet</span><span>Jui.</span></div>
+  </div>
+</div>
+
+
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Juillet 2026<br>Autres activités</div>
+  </div>
+  <div class="others">
+    <div class="cnt">Autres activités documentées en juillet 2026 — 14</div>
+    <p class="small" style="margin-bottom:5mm">Toutes les activités du calendrier ont eu lieu. Les fiches détaillées sont consacrées aux activités majeures du mois ; les entrées ci-dessous complètent le calendrier juillet 2026.</p>
+    <table>
+      
+      <tr>
+        <td class="d">Wednesday 1 July</td>
+        <td class="a">APP TOT Preparatory Meeting</td>
+        <td class="l">Online</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Wednesday 1 – Saturday 04 </td>
+        <td class="a">Renewal process of IM5 (Vehicle Documentation) for the 3 (Three) office vehicles</td>
+        <td class="l">Douala- Cameroon</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Monday 06 – Friday 10 July</td>
+        <td class="a">Regional Workshop to promote the adoption of Guidelines on Phytosanitary Measures for Potato Cyst Nematode (PCN) and Soft Rot Pectobacteriaceae (SRP) in Eastern and Southern Africa</td>
+        <td class="l">Addis-Ababa ; Ethiopia</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Wednesday 22 July 2026 ; 1</td>
+        <td class="a">The African Seed and Biotechnology Partnership Platform Technical Working Group Meeting</td>
+        <td class="l">Online ; Zoom Meeting</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Wednesday 22 – Friday 24 J</td>
+        <td class="a">Launch of the African Union Framework for AMR Control 2.0 and Africa CDC Food Safety Strategic Framework</td>
+        <td class="l">Addis-Ababa ; Ethiopia</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Thursday 23 July ; 14:00</td>
+        <td class="a">Réunion d’Alerte sur la progression de la maladie du Bunchy Top des Bananiers et Plantins au Cameroun</td>
+        <td class="l">Yaoundé ; MINADER</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Friday 24 July ; 15:00hrs </td>
+        <td class="a">Virtual All Directors Meeting</td>
+        <td class="l">Online ; Zoom Meeting</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Tuesday 28 July ; 9:00-</td>
+        <td class="a"></td>
+        <td class="l">Online</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Wednesday 29 July 2026 ; 1</td>
+        <td class="a">Preparatory Meeting with SSB Committee and NPPOs for Regional Workshop Libreville</td>
+        <td class="l">Online ; Microsoft Teams Meeting</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Jeudi 30 July ; 10:00- 12:</td>
+        <td class="a">Staff Monthly meeting</td>
+        <td class="l">Conference Hall AU-IAPSC</td>
+      </tr>
+      
+      <tr>
+        <td class="d">30 July 2026 13:00-14:00</td>
+        <td class="a">Consultancy Services to Develop an Advisory Early Warning System in Plant Health (EWS)</td>
+        <td class="l">Online</td>
+      </tr>
+      
+      <tr>
+        <td class="d">30 July 2026 13:00-16:00</td>
+        <td class="a">Special Session of the Specialised STC-ARDWE on the 2026/2027 El Nino Phenomenon, scheduled to take place in hybrid format</td>
+        <td class="l">Online</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Jeudi 30 juillet ; 18:30- </td>
+        <td class="a">Réception à l’occasion de la fête du Trône du Royaume du Maroc</td>
+        <td class="l">Hotel Hilton</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Vendredi 31 juillet - 11:0</td>
+        <td class="a">64ème Edition de la Journée de la Femme Africaine</td>
+        <td class="l">Esplanade du Conseil Régional du Centre</td>
+      </tr>
+      
+    </table>
+    <div class="strip">
+      <figure><img src="static/images/book/nl_p04_x55.png"><figcaption>Archives AU-IAPSC — Juillet</figcaption></figure>
+      <figure><img src="static/images/book/nl_p25_x387.png"><figcaption>Archives AU-IAPSC — Juillet</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p10_x138.png"><figcaption>Archives AU-IAPSC — Juillet</figcaption></figure>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Juillet</span><span>Jui.</span></div>
+  </div>
+</div>
+
+
+
+<div class="page month">
+  <div class="top"><span>AU-IAPSC · Calendrier annuel 2026</span><span>Chapitre mensuel</span></div>
+  <div class="ghost">AOÛT</div>
+  <div class="title"><h2>Août 2026</h2><div class="fr">13 activités réalisées — 6 présentées en fiches</div></div>
+  <div class="count">13 activités</div>
+  <div class="events">
+    <h4>Moments clés du mois</h4>
+    
+    <div class="ev"><div class="d">Monday 3 August</div><div class="t">Preparatory meetings with the ECCAS Commission of Agriculture, IPPC and the FAO Central African</div></div>
+    
+    <div class="ev"><div class="d">Wednesday 12- Friday 14 Augu</div><div class="t">Capacity-building workshop organized by Barry Callebaut</div></div>
+    
+    <div class="ev"><div class="d">Wednesday 26- Friday 28</div><div class="t">Capacity-building workshop organized by Barry Callebaut</div></div>
+    
+    <div class="ev"><div class="d">Wednesday 26 ; 16:00 - 17:00</div><div class="t">Invitation to Join the Technical Team for the 2026 CAADP Partnership Platform</div></div>
+    
+    <div class="ev"><div class="d">Monday 31- Friday 04 Septemb</div><div class="t">Africa Food Systems Forum (AFSF) 2026.</div></div>
+    
+  </div>
+  <img class="photo" src="static/images/book/book_nl_p24_x381.png" alt="">
+  <div class="pfoot"><span>Août 2026</span><span>Calendrier annuel</span></div>
+</div>
+
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Août 2026<br>Fiches activités</div>
+  </div>
+  <div class="fpage">
+    <div class="fhead"><div class="m">Août 2026</div><div class="c">Activités majeures — 1/2</div></div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Monday 3 August</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Libreville, Republic of Gabon</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator &amp; SSO-E</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Preparatory meetings with the ECCAS Commission of Agriculture, IPPC and the FAO Central African Subregion ahead of the IPPC Regional workshop</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Contribuer aux travaux régionaux de la CIPV pour l&#39;Afrique et à l&#39;harmonisation des mesures phytosanitaires.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Wednesday 12- Friday 14 August</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Conference Hall ; AU-IAPSC — Cameroun (Siège)</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">AGRISPORT &amp; Barry Callebaut Society</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Capacity-building workshop organized by Barry Callebaut</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Renforcer les capacités phytosanitaires des organisations nationales et des experts africains.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Wednesday 26- Friday 28</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Conference Hall ; AU-IAPSC — Cameroun (Siège)</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">AGRISPORT &amp; Barry Callebaut Society</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Capacity-building workshop organized by Barry Callebaut</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Renforcer les capacités phytosanitaires des organisations nationales et des experts africains.</div>
+      </div>
+    </div>
+    
+    <div class="strip">
+      
+      
+      <figure><img src="static/images/book/nl_p25_x387.png"><figcaption>Archives AU-IAPSC — Août</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p02_x9.png"><figcaption>Archives AU-IAPSC — Août</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p03_x30.png"><figcaption>Archives AU-IAPSC — Août</figcaption></figure>
+      
+      
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Août</span><span>Aoû.</span></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Août 2026<br>Fiches activités</div>
+  </div>
+  <div class="fpage">
+    <div class="fhead"><div class="m">Août 2026</div><div class="c">Activités majeures — 2/2</div></div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Wednesday 26 ; 16:00 - 17:00</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Non précisé</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator ; SSO-P</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Invitation to Join the Technical Team for the 2026 CAADP Partnership Platform</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Soutenir la domestisation et la mise en œuvre des lignes directrices du CAADP pour l&#39;agriculture africaine.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Monday 31- Friday 04 September 2026</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Kigali, Rwanda</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator &amp;</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Africa Food Systems Forum (AFSF) 2026.</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Contribuer à la mise en œuvre du mandat phytosanitaire de l&#39;AU-IAPSC.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Monday 31 ; 01:00 PM - 02:30 PM</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Online</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">En ligne</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">—</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">CAADP PP Technical Team Meeting</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Soutenir la domestisation et la mise en œuvre des lignes directrices du CAADP pour l&#39;agriculture africaine.</div>
+      </div>
+    </div>
+    
+    <div class="strip">
+      
+      
+      <figure><img src="static/images/book/book_nl_p04_x57.png"><figcaption>Archives AU-IAPSC — Août</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p05_x80.png"><figcaption>Archives AU-IAPSC — Août</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p07_x97.png"><figcaption>Archives AU-IAPSC — Août</figcaption></figure>
+      
+      
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Août</span><span>Aoû.</span></div>
+  </div>
+</div>
+
+
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Août 2026<br>Autres activités</div>
+  </div>
+  <div class="others">
+    <div class="cnt">Autres activités documentées en août 2026 — 7</div>
+    <p class="small" style="margin-bottom:5mm">Toutes les activités du calendrier ont eu lieu. Les fiches détaillées sont consacrées aux activités majeures du mois ; les entrées ci-dessous complètent le calendrier août 2026.</p>
+    <table>
+      
+      <tr>
+        <td class="d">Tuesday 4 to 7 August</td>
+        <td class="a">2026 International Plant Protection Convention (IPPC) Regional Workshop for Africa</td>
+        <td class="l">Libreville, Republic of Gabon</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Monday 10 August ; 15:00-1</td>
+        <td class="a">Meeting on the Overview of the Third Matrix of the Programme of Action (PoA) for the Implementation of the Sendai Framework for Disaster Risk Reduction in Africa (2026-2030)</td>
+        <td class="l">Online</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Thursday 13 August 2026 – </td>
+        <td class="a">Upscaling the Benefits of Push-Pull Technology for Sustainable Agricultural Intensification in East Africa - Final Review Meeting.</td>
+        <td class="l">Online ; (Microsoft Teams meeting)</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Thursday 13 August 2026 –1</td>
+        <td class="a">« La biosécurité végétale au service de la sécurité alimentaire /Plant biosecurity for Food Security</td>
+        <td class="l">Salle de Conférence du MINADER</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Monday 17- Friday 21 Augus</td>
+        <td class="a">Continental Meeting to Co-create the Implementation Roadmap and Continental Accountability Mechanisms for the AU Framework for AMR Control (2026–2030)</td>
+        <td class="l">Mombasa- Kenya</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Wednesday 26 ; 10:00 - 12:</td>
+        <td class="a">ARBE Departmental meeting ; Draft Agenda: ; Welcome Remarks ; Progress Report on the Implementation of the Annual Workplans and Q3 Mission Matrix. ; Presentation of the Budget Execution Report and Proposed Acceleration Plans. ; Urgent Matters and Major Planned Activities for 2026 ; AOB ; Closure</td>
+        <td class="l">Online ; (Microsoft Teams meeting)</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Wednesday 26 ; 2:00 to 3:0</td>
+        <td class="a">Courtesy call to AU-IAPSC offices by delegation from the Pan African Parliament (PAP) comprising Hon. Suleyman Saho, Minister of Agriculture, The Gambia and Chair of the PAP Committee on Agriculture and Mr Galal Ari, Clerk of the PAP Agriculture Committee</td>
+        <td class="l">AU-IAPSC</td>
+      </tr>
+      
+    </table>
+    <div class="strip">
+      <figure><img src="static/images/book/nl_p13_x190.png"><figcaption>Archives AU-IAPSC — Août</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p07_x97.png"><figcaption>Archives AU-IAPSC — Août</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p14_x216.png"><figcaption>Archives AU-IAPSC — Août</figcaption></figure>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Août</span><span>Aoû.</span></div>
+  </div>
+</div>
+
+
+
+<div class="page month">
+  <div class="top"><span>AU-IAPSC · Calendrier annuel 2026</span><span>Chapitre mensuel</span></div>
+  <div class="ghost">SEPTEMBRE</div>
+  <div class="title"><h2>Septembre 2026</h2><div class="fr">7 activités réalisées — 6 présentées en fiches</div></div>
+  <div class="count">7 activités</div>
+  <div class="events">
+    <h4>Moments clés du mois</h4>
+    
+    <div class="ev"><div class="d">Monday 31 August–4 September</div><div class="t">The Africa Food Systems Forum (AFSF) 2026</div></div>
+    
+    <div class="ev"><div class="d">Thursday 10</div><div class="t">AU-IAPSC Staff Meeting</div></div>
+    
+    <div class="ev"><div class="d">Monday 14 to Thursday 17</div><div class="t">The International Phytosanitary and Seed Quality Conference,</div></div>
+    
+    <div class="ev"><div class="d">Tuesday 15 to Friday 18</div><div class="t">The (AUC-ARBE) 22nd Annual Comprehensive Africa Agriculture Development Programme Partnership P</div></div>
+    
+    <div class="ev"><div class="d">Monday 14 to Saturday 19</div><div class="t">Network Infrastructure Assessment Mission at AU-IAPSC Office</div></div>
+    
+  </div>
+  <img class="photo" src="static/images/book/book_nl_p27_x425.png" alt="">
+  <div class="pfoot"><span>Septembre 2026</span><span>Calendrier annuel</span></div>
+</div>
+
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Septembre 2026<br>Fiches activités</div>
+  </div>
+  <div class="fpage">
+    <div class="fhead"><div class="m">Septembre 2026</div><div class="c">Activités majeures — 1/2</div></div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Monday 31 August–4 September 2026,</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Kigali, Rwanda</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">The Africa Food Systems Forum (AFSF) 2026</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Contribuer à la mise en œuvre du mandat phytosanitaire de l&#39;AU-IAPSC.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Thursday 10</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Conference Hall — Cameroun (Siège)</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">All staff</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">AU-IAPSC Staff Meeting</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Renforcer la coordination et la gouvernance institutionnelle de l&#39;AU-IAPSC.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Monday 14 to Thursday 17</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">KEPHIS Headquarters, Nairobi-Kenya</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator &amp; SSOP</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">The International Phytosanitary and Seed Quality Conference,</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Faciliter les échanges régionaux de semences et de matériel végétatif dans le respect des normes phytosanitaires.</div>
+      </div>
+    </div>
+    
+    <div class="strip">
+      
+      
+      <figure><img src="static/images/book/book_nl_p07_x99.png"><figcaption>Archives AU-IAPSC — Septembre</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p08_x108.png"><figcaption>Archives AU-IAPSC — Septembre</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p10_x138.png"><figcaption>Archives AU-IAPSC — Septembre</figcaption></figure>
+      
+      
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Septembre</span><span>Sep.</span></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Septembre 2026<br>Fiches activités</div>
+  </div>
+  <div class="fpage">
+    <div class="fhead"><div class="m">Septembre 2026</div><div class="c">Activités majeures — 2/2</div></div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Tuesday 15 to Friday 18</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Harare, Zimbabwe</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">SSOE</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">The (AUC-ARBE) 22nd Annual Comprehensive Africa Agriculture Development Programme Partnership Platform (CAADP-PP) Meeting</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Soutenir la domestisation et la mise en œuvre des lignes directrices du CAADP pour l&#39;agriculture africaine.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Monday 14 to Saturday 19</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Yaounde — Cameroun</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">MIS Staff &amp; AU-IAPSC Staff</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Network Infrastructure Assessment Mission at AU-IAPSC Office</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Contribuer à l&#39;harmonisation phytosanitaire régionale et au partage d&#39;expériences.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Monday 21 to Wednesday 23</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Kribi, Cameroon — Cameroun</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">All Staff</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">AU-IAPSC Staff Team-building Workshop</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Renforcer les capacités phytosanitaires des organisations nationales et des experts africains.</div>
+      </div>
+    </div>
+    
+    <div class="strip">
+      
+      
+      <figure><img src="static/images/book/book_nl_p11_x149.png"><figcaption>Archives AU-IAPSC — Septembre</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p12_x174.png"><figcaption>Archives AU-IAPSC — Septembre</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p12_x175.png"><figcaption>Archives AU-IAPSC — Septembre</figcaption></figure>
+      
+      
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Septembre</span><span>Sep.</span></div>
+  </div>
+</div>
+
+
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Septembre 2026<br>Autres activités</div>
+  </div>
+  <div class="others">
+    <div class="cnt">Autres activités documentées en septembre 2026 — 1</div>
+    <p class="small" style="margin-bottom:5mm">Toutes les activités du calendrier ont eu lieu. Les fiches détaillées sont consacrées aux activités majeures du mois ; les entrées ci-dessous complètent le calendrier septembre 2026.</p>
+    <table>
+      
+      <tr>
+        <td class="d">27 September to 02</td>
+        <td class="a">The 20th Caribbean Week of Agriculture (CWA 20)</td>
+        <td class="l">Jamaica</td>
+      </tr>
+      
+    </table>
+    <div class="strip">
+      <figure><img src="static/images/book/book_nl_p03_x30.png"><figcaption>Archives AU-IAPSC — Septembre</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p12_x174.png"><figcaption>Archives AU-IAPSC — Septembre</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p20_x304.png"><figcaption>Archives AU-IAPSC — Septembre</figcaption></figure>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Septembre</span><span>Sep.</span></div>
+  </div>
+</div>
+
+
+
+<div class="page month">
+  <div class="top"><span>AU-IAPSC · Calendrier annuel 2026</span><span>Chapitre mensuel</span></div>
+  <div class="ghost">OCTOBRE</div>
+  <div class="title"><h2>Octobre 2026</h2><div class="fr">12 activités réalisées — 6 présentées en fiches</div></div>
+  <div class="count">12 activités</div>
+  <div class="events">
+    <h4>Moments clés du mois</h4>
+    
+    <div class="ev"><div class="d">27 September to 02 October</div><div class="t">The 20th Caribbean Week of Agriculture (CWA 20)</div></div>
+    
+    <div class="ev"><div class="d">Monday 5- Wednesday 07</div><div class="t">The Inaugural African Union Seed Summit in Mbabane, Kingdom of Eswatini</div></div>
+    
+    <div class="ev"><div class="d">Tuesday 6-Thursday 8</div><div class="t">Africa Fruit Connect 2026</div></div>
+    
+    <div class="ev"><div class="d">Monday 5- Friday 9</div><div class="t">Workshop to relaunch the Project “Harmonization of the Phytosanitary Legislative Framework of C</div></div>
+    
+    <div class="ev"><div class="d">Friday 16</div><div class="t">Staff monthly meeting</div></div>
+    
+  </div>
+  <img class="photo" src="static/images/book/book_nl_p29_x455.png" alt="">
+  <div class="pfoot"><span>Octobre 2026</span><span>Calendrier annuel</span></div>
+</div>
+
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Octobre 2026<br>Fiches activités</div>
+  </div>
+  <div class="fpage">
+    <div class="fhead"><div class="m">Octobre 2026</div><div class="c">Activités majeures — 1/2</div></div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">27 September to 02 October</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Jamaica — Jamaïque</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">The 20th Caribbean Week of Agriculture (CWA 20)</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Contribuer à la mise en œuvre du mandat phytosanitaire de l&#39;AU-IAPSC.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Monday 5- Wednesday 07</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Online</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">En ligne</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator, SSOP &amp; SSOE</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">The Inaugural African Union Seed Summit in Mbabane, Kingdom of Eswatini</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Faciliter les échanges régionaux de semences et de matériel végétatif dans le respect des normes phytosanitaires.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Tuesday 6-Thursday 8</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Nairobi, Kenya</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">Coordinator, Administrative Assistant &amp; finance Assistant</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Africa Fruit Connect 2026</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Contribuer à la mise en œuvre du mandat phytosanitaire de l&#39;AU-IAPSC.</div>
+      </div>
+    </div>
+    
+    <div class="strip">
+      
+      
+      <figure><img src="static/images/book/book_nl_p13_x188.png"><figcaption>Archives AU-IAPSC — Octobre</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p14_x216.png"><figcaption>Archives AU-IAPSC — Octobre</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p15_x242.png"><figcaption>Archives AU-IAPSC — Octobre</figcaption></figure>
+      
+      
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Octobre</span><span>Oct.</span></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Octobre 2026<br>Fiches activités</div>
+  </div>
+  <div class="fpage">
+    <div class="fhead"><div class="m">Octobre 2026</div><div class="c">Activités majeures — 2/2</div></div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Monday 5- Friday 9</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Douala - Cameroun</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">SSOE &amp; Driver</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Workshop to relaunch the Project “Harmonization of the Phytosanitary Legislative Framework of Central Africa”</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Renforcer les capacités phytosanitaires des organisations nationales et des experts africains.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Friday 16</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">IAPSC Conference Hall — Cameroun (Siège)</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">All Staff</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">Staff monthly meeting</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Renforcer la coordination et la gouvernance institutionnelle de l&#39;AU-IAPSC.</div>
+      </div>
+    </div>
+    
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">Tuesday 20- ; Friday 23</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">Addis-Ababa, Ethiopia — Éthiopie</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">Présentiel</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">SSOP</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">The HHP Risk Assessment Workshop ; (Deliver Opening and Closing Remarks)</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>Renforcer les capacités phytosanitaires des organisations nationales et des experts africains.</div>
+      </div>
+    </div>
+    
+    <div class="strip">
+      
+      
+      <figure><img src="static/images/book/book_nl_p17_x266.png"><figcaption>Archives AU-IAPSC — Octobre</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p18_x286.png"><figcaption>Archives AU-IAPSC — Octobre</figcaption></figure>
+      
+      
+      
+      <figure><img src="static/images/book/book_nl_p19_x292.png"><figcaption>Archives AU-IAPSC — Octobre</figcaption></figure>
+      
+      
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Octobre</span><span>Oct.</span></div>
+  </div>
+</div>
+
+
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Octobre 2026<br>Autres activités</div>
+  </div>
+  <div class="others">
+    <div class="cnt">Autres activités documentées en octobre 2026 — 6</div>
+    <p class="small" style="margin-bottom:5mm">Toutes les activités du calendrier ont eu lieu. Les fiches détaillées sont consacrées aux activités majeures du mois ; les entrées ci-dessous complètent le calendrier octobre 2026.</p>
+    <table>
+      
+      <tr>
+        <td class="d">Monday 5 - Thursday 08</td>
+        <td class="a">TC-RPPO in Riyad, Saudi Arabia</td>
+        <td class="l">Online</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Friday 16 ; 16:00-16:30</td>
+        <td class="a">Follow-up on the EU Omnibus discussion</td>
+        <td class="l">Online</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Monday 19- Friday 23</td>
+        <td class="a">26th Biennial Scientific Conference of the African Association of Insect Scientists</td>
+        <td class="l">Abuja, Nigeria ; &amp; Online</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Tuesday 20- Thursday 22</td>
+        <td class="a">Annual Biocontrol Industry Meeting 2026</td>
+        <td class="l">Basel, Switzerland</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Monday 26 – Friday 30</td>
+        <td class="a">The 7th International Symposium on Biological Control of Arthropods (ISBCA)</td>
+        <td class="l">Nairobi - Kenya</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Tuesday 27- Friday 30</td>
+        <td class="a">Strategic Planning Group (SPG) Meeting</td>
+        <td class="l">Foz de Iguacu, Brazil</td>
+      </tr>
+      
+    </table>
+    <div class="strip">
+      <figure><img src="static/images/book/book_nl_p08_x108.png"><figcaption>Archives AU-IAPSC — Octobre</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p17_x266.png"><figcaption>Archives AU-IAPSC — Octobre</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p27_x425.png"><figcaption>Archives AU-IAPSC — Octobre</figcaption></figure>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — Octobre</span><span>Oct.</span></div>
+  </div>
+</div>
+
+
+
+
+<div class="page ongoing">
+  <div class="inner">
+    <div class="kick" style="color:var(--yellow)">Mois en cours</div>
+    <h2>Novembre 2026</h2>
+    <div class="tag">Calendrier annuel — édition en cours</div>
+    <p style="font-size:10.5pt;line-height:1.7;color:#EAF4EE;max-width:150mm">Les activités de novembre 2026 sont <strong>en cours de réalisation</strong> à la date d'édition de ce livre. Elles sont présentées ci-dessous telles que planifiées dans la matrice mensuelle ; le bilan consolidé paraîtra dans la prochaine édition du calendrier annuel.</p>
+    <table style="margin-top:6mm">
+      
+      <tr>
+        <td class="d">Monday 02 – Wednesday 04</td>
+        <td class="a">Africa Stakeholder Consultation on the GreenPass Protocol for Cross-Border Seed and Germplasm Exchange</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Wednesday 04-Thursday 05</td>
+        <td class="a">Seed Traders Association of Kenya (STAK) 2026 Congress</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Wednesday 04</td>
+        <td class="a">ARBE STAFF Hybrid Meeting</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Thursday 05 ; 13:00-15:00 </td>
+        <td class="a">All Head of Missions and Directors Meeting</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Friday 06 ; 16h (EAT)</td>
+        <td class="a">Initiative Open-ePhyto AACE</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Monday 09 – Thursday 12</td>
+        <td class="a">Meeting of the working group of the STDF &amp; Meeting for All STDF Developing country experts</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Tuesday 10 ; 2:30pm to 5:0</td>
+        <td class="a">Cote d&#39;Ivoire CAADP Pre-planning Meeting 1 on CAADP Kampala Capacity Building, Coordination and Implementation plan support</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Tuesday 10- Friday 13</td>
+        <td class="a">the 7th Steering Group Meeting and 3rd General Assembly of the African Seed and Biotechnology Partnership Platform</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Friday 13</td>
+        <td class="a">Staff monthly meeting</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Monday 16 – Saturday 21</td>
+        <td class="a">Kick-off Meeting on Development of Pest Monitoring and Eco-Friendly Control Technologies</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Thursday 19</td>
+        <td class="a">Atelier de renforcement des Capacités des personnels de terrain de la région de l’ouest Cameroun organisé par Croplife Cameroun</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Monday 23-Thursday 26</td>
+        <td class="a">African Union Meeting to Finalize the CAADP Kampala Results Framework and Develop the Capacity-Building and Implementation Support Strategy</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Monday 23- Tuesday 24</td>
+        <td class="a">Africa Trade and Development Forum (ATDF 2026), themed “Building Africa’s Exports Through Quality,” at the Ethiopian Skylight Hotel</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Wednesday 25 – Friday 27</td>
+        <td class="a">“Leveraging EU-African public–private partnerships to scale innovative crop protection solutions and reduce reliance on synthetic pesticides in tropical agricultural value chains.” Organised by COLEAD &amp; CIRAD</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Wednesday 25 – Friday 27</td>
+        <td class="a">8ème session ordinaire d&#39;homologation des pesticides en Afrique Centrale.</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Sunday 29 Nov - Friday 04 </td>
+        <td class="a">49th Annual Meeting of North American Plant Protection Organization (NAPPO)</td>
+      </tr>
+      
+      <tr>
+        <td class="d">Monday 30 Nov - Saturday 0</td>
+        <td class="a">Atelier Régional de Renforcement des Capacités des Agents de Surveillance sur les Techniques de Collecte de données dans le Programme Phytosanitaire Africain</td>
+      </tr>
+      
+    </table>
+    <p class="note">AU-IAPSC — Calendrier annuel des activités 2026 · Novembre : 17 activités programmées.</p>
+  </div>
+</div>
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Synthèse<br>février — octobre 2026</div>
+  </div>
+  <div class="ph">
+    <div class="kick b">Synthèse</div>
+    <h2 class="pt">Faits marquants &amp; thématiques</h2>
+    <div class="rule"></div>
+    <div class="cols2">
+      <div class="col txt">
+        <div class="sig">Gouvernance &amp; diplomatie</div>
+        <p>La <strong>20ᵉ Conférence des Parties (CPM 20)</strong> de la CIPV à Rome (9–13 mars) a ouvert l'année diplomatique. L'AU-IAPSC y a porté la coordination phytosanitaire africaine aux côtés des ONPV et partenaires mondiaux.</p>
+        <p>En août, le <strong>atelier régional CIPV pour l'Afrique à Libreville</strong> a réuni experts et autorités ; le <strong>Forum Alimentaire Africain (AFSF)</strong> à Kigali a mis la santé des végétaux au cœur de l'agenda continental.</p>
+      </div>
+      <div class="col txt">
+        <div class="sig">Capacités &amp; projets</div>
+        <p>Le <strong>projet STDF sur le bunchy top de la bananier</strong> (lancé en février à Entebbe) et la <strong>Phase 3 du Programme Phytosanitaire Africain</strong> (formation des formateurs à Addis-Abeba, juillet) constituent les deux chantiers capacitaires majeurs de l'année.</p>
+        <p>Les ateliers de <strong>biopesticides à Nairobi</strong> (avril), le <strong>renforcement Barry Callebaut</strong> à Yaoundé (août), la <strong>Journée internationale de la santé des végétaux</strong> (mai) et le <strong>WAVE à Abuja</strong> (juillet) illustrent la diversification thématique du mandat.</p>
+      </div>
+    </div>
+    <div class="strip">
+      <figure><img src="static/images/book/book_nl_p25_x387.png"><figcaption>Session de travail — archives AU-IAPSC</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p12_x174.png"><figcaption>Rencontre institutionnelle — archives AU-IAPSC</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p29_x455.png"><figcaption>Atelier technique — archives AU-IAPSC</figcaption></figure>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026</span><span>Faits marquants</span></div>
+  </div>
+</div>
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Coopération<br>institutionnelle</div>
+  </div>
+  <div class="ph">
+    <div class="kick">Coopération</div>
+    <h2 class="pt">Partenaires &amp; coopération institutionnelle</h2>
+    <div class="rule"></div>
+    <div class="cols2">
+      <div class="col">
+        <div class="sig">Cadre multilatéral</div>
+        <div class="box"><ul>
+          <li>Convention internationale pour la protection des végétaux (CIPV / IPPC)</li>
+          <li>Organisation des Nations unies pour l'alimentation et l'agriculture (FAO)</li>
+          <li>Fonds pour l'application des normes (STDF / WTO)</li>
+          <li>Commissariat aux Plantes et Animaux (CPAA / AU-IBAR)</li>
+        </ul></div>
+        <div class="sig">Programmes africains</div>
+        <div class="box b"><ul>
+          <li>Programme phytosanitaire africain (APP) — Phase 3</li>
+          <li>CAADP — lignes directrices de La Havane</li>
+          <li>AfCFTA — sous-comité SPS</li>
+          <li>CEA / CEEAC — commissions d'agriculture</li>
+        </ul></div>
+      </div>
+      <div class="col">
+        <div class="sig">Technique &amp; privé</div>
+        <div class="box"><ul>
+          <li>CABI — biopesticides, appui technique</li>
+          <li>icipe, IITA, universités partenaires</li>
+          <li>TradeMark Africa, WAVE, Agrisport</li>
+          <li>Barry Callebaut, Croplife, STAK</li>
+        </ul></div>
+        <div class="box b">
+          <h4>Note</h4>
+          <p class="small">Liste reconstituée des intitulés d'activités et des documents de référence. Un inventaire exhaustif des partenaires mériterait validation par le service communication.</p>
+        </div>
+        <figure class="ph"><img src="static/images/book/book_nl_p20_x304.png"><figcaption>Réunion de coordination — archives AU-IAPSC</figcaption></figure>
+      </div>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026</span><span>Partenaires</span></div>
+  </div>
+</div>
+
+
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">État des lieux<br>et suite</div>
+  </div>
+  <div class="ph">
+    <div class="kick">État des lieux</div>
+    <h2 class="pt">Perspectives &amp; suite</h2>
+    <div class="rule"></div>
+    <div class="txt">
+      <p>Sur <strong>février–octobre 2026</strong>, le calendrier annuel de l'AU-IAPSC a documenté <strong>112 activités réalisées</strong>, dont plusieurs rendez-vous structurants — CPM 20, Phase 3 de l'APP, atelier régional CIPV, AFSF — et un flux soutenu de consultations en ligne. <strong>Novembre</strong>, mois en cours à la date d'édition, prolonge cette dynamique avec 17 activités programmées.</p>
+      <p>Les chantiers ouverts pour la suite de l'année et 2027 incluent le suivi du <strong>projet STDF BBTD</strong>, la domestisation des lignes directrices CAADP, le déploiement des systèmes d'alerte précoce (EWS) et la suite des travaux sur les échanges de semences.</p>
+      <p>Ce livre constitue la <strong>première édition du calendrier annuel des activités</strong>. Une édition complémentaire paraîtra après la clôture de novembre et la consolidation des rapports de mission.</p>
+    </div>
+    <div class="g2" style="margin-top:6mm">
+      <div class="gc"><h3>Points de vigilance éditoriale</h3>
+        <p class="small">• Matrice d'octobre en version brouillon — données susceptibles d'évoluer.<br>• Doublons inter-mois signalés (AFSF, STDF WG, APP ToT, CWA).<br>• Objectifs : reformulations éditoriales à valider.<br>• Activités majeures : sélection éditoriale des 52 fiches présentées.</p>
+      </div>
+      <div class="gc"><h3>Prochaines étapes</h3>
+        <p class="small">1. Validation des objectifs rédigés par le service concerné.<br>2. Intégration des rapports de mission pour les résultats documentés.<br>3. Ajout des photographies originales 2026 et du logo vectoriel.<br>4. Édition « bilan annuel » après clôture de novembre.</p>
+      </div>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026</span><span>Perspectives</span></div>
+  </div>
+</div>
+
+
+<div class="page">
+  <div class="ph" style="background:var(--deep);color:#fff;height:100%">
+    <div class="kick" style="color:var(--yellow)">Crédits &amp; sources</div>
+    <h2 class="pt" style="color:#fff">Notes éditoriales &amp; sources</h2>
+    <div class="rule" style="background:linear-gradient(90deg,var(--yellow),transparent)"></div>
+    <div class="cols2">
+      <div class="col" style="color:#DFF0E4">
+        <div class="sig" style="color:var(--yellow)">Sources des données</div>
+        <p class="small" style="color:#DFF0E4">Matrices mensuelles d'activités AU-IAPSC (février–novembre 2026, format .docm) — champs Dates, Venue, Staff concerned, Activity. Rapport annuel AU-IAPSC 2025 et newsletter pour la voix éditoriale et les archives photographiques.</p>
+        <div class="sig" style="color:var(--yellow);margin-top:6mm">Direction artistique</div>
+        <p class="small" style="color:#DFF0E4">Charte inspirée de « The AU-IAPSC Newsletter » : palette vert/bordeaux/jaune, serif corps + sans titres, fiches d'activités normalisées, masthead institutionnel.</p>
+      </div>
+      <div class="col" style="color:#DFF0E4">
+        <div class="sig" style="color:var(--yellow)">Limites connues</div>
+        <p class="small" style="color:#DFF0E4">• 9 doublons inter-mois identifiés et signalés.<br>• Une part des lieux non précisée dans les matrices.<br>• Champs « Objectifs » et « Statut » vides dans les sources.<br>• Photographies : archives newsletter/rapport — en attendant les visuels 2026.<br>• Novembre 2026 : mois en cours, activités programmées.</p>
+        <div style="margin-top:8mm;font-family:'Marcellus';font-size:20pt;color:#fff">AU-IAPSC</div>
+        <p class="small" style="color:#9FC7AB">Inter-African Phytosanitary Council<br>Yaoundé, Cameroun — Calendrier annuel 2026</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

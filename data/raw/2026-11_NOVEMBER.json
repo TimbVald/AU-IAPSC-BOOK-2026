@@ -1,0 +1,155 @@
+{
+  "file": "November 2026 activities matrix.docm",
+  "month_title": "NOVEMBER 2026",
+  "month": "NOVEMBER",
+  "month_num": 11,
+  "year": 2026,
+  "period": "2026-11",
+  "headers": [
+    "Dates & Time",
+    "Venue",
+    "Staff concerned",
+    "Activity",
+    "Objectives, Expected Outcomes",
+    "Status of report"
+  ],
+  "activities": [
+    {
+      "date": "Monday 02 – Wednesday 04",
+      "venue": "Nairobi - Kenya",
+      "staff": "Coordinator & SSOP",
+      "activity": "Africa Stakeholder Consultation on the GreenPass Protocol for Cross-Border Seed and Germplasm Exchange",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Wednesday 04-Thursday 05",
+      "venue": "Nairobi - Kenya",
+      "staff": "Coordinator & SSOP",
+      "activity": "Seed Traders Association of Kenya (STAK) 2026 Congress",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Wednesday 04",
+      "venue": "Hybrid ; ( 8h-11h)  and ; AUC Headquarters",
+      "staff": "ALL ARBE STAFF",
+      "activity": "ARBE STAFF Hybrid Meeting",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Thursday 05 ; 13:00-15:00 (EAT)",
+      "venue": "Online",
+      "staff": "All Head of Missions and Directors",
+      "activity": "All Head of Missions and Directors Meeting",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Friday 06 ; 16h (EAT)",
+      "venue": "Online",
+      "staff": "Coordinator, SSOP, SSOE & GUCE Gie Team",
+      "activity": "Initiative Open-ePhyto AACE",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Monday 09 – Thursday 12",
+      "venue": "Geneva",
+      "staff": "Coordinator",
+      "activity": "Meeting of the working group of the STDF & Meeting for All STDF Developing country experts",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Tuesday 10 ; 2:30pm to 5:00pm (EAT)",
+      "venue": "Online",
+      "staff": "SSOP",
+      "activity": "Cote d'Ivoire CAADP Pre-planning Meeting 1 on CAADP Kampala Capacity Building, Coordination and Implementation plan support",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Tuesday 10- Friday 13",
+      "venue": "Dar es Salaam, Tanzania",
+      "staff": "SSOP",
+      "activity": "the 7th Steering Group Meeting and 3rd General Assembly of the African Seed and Biotechnology Partnership Platform",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Friday 13",
+      "venue": "IAPSC Conference Hall",
+      "staff": "All Staff",
+      "activity": "Staff monthly meeting",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Monday 16 – Saturday 21",
+      "venue": "Seoul, Republic of Korea",
+      "staff": "SSOE",
+      "activity": "Kick-off Meeting on Development of Pest Monitoring and Eco-Friendly Control Technologies",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Thursday 19",
+      "venue": "Bafoussam, Cameroun",
+      "staff": "Coordinator",
+      "activity": "Atelier de renforcement des Capacités des personnels de terrain de la région de l’ouest Cameroun organisé par Croplife Cameroun",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Monday 23-Thursday 26",
+      "venue": "Abidjan, Cote d’Ivoire.",
+      "staff": "SSOP",
+      "activity": "African Union Meeting to Finalize the CAADP Kampala Results Framework and Develop the Capacity-Building and Implementation Support Strategy",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Monday 23- Tuesday 24",
+      "venue": "Addis-Ababa, Ethiopia",
+      "staff": "Coordinator",
+      "activity": "Africa Trade and Development Forum (ATDF 2026), themed “Building Africa’s Exports Through Quality,” at the Ethiopian Skylight Hotel",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Wednesday 25 – Friday 27",
+      "venue": "Brussels, Belgium",
+      "staff": "Coordinator",
+      "activity": "“Leveraging EU-African public–private partnerships to scale innovative crop protection solutions and reduce reliance on synthetic pesticides in tropical agricultural value chains.” Organised by COLEAD & CIRAD",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Wednesday 25 – Friday 27",
+      "venue": "Malabo, République de Guinée Equatoriale.",
+      "staff": "SSOE",
+      "activity": "8ème session ordinaire d'homologation des pesticides en Afrique Centrale.",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Sunday 29 Nov - Friday 04 Dec",
+      "venue": "Mexico",
+      "staff": "Coordinator",
+      "activity": "49th Annual Meeting of North American Plant Protection Organization (NAPPO)",
+      "objectives_outcomes": "Collaborate & experience sharing",
+      "status": ""
+    },
+    {
+      "date": "Monday 30 Nov - Saturday 05 Dec",
+      "venue": "Douala",
+      "staff": "Coordinator",
+      "activity": "Atelier Régional de Renforcement des Capacités des Agents de Surveillance sur les Techniques de Collecte de données dans le Programme Phytosanitaire Africain",
+      "objectives_outcomes": "",
+      "status": ""
+    }
+  ],
+  "trailing_notes": []
+}

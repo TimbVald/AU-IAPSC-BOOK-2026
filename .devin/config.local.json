@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Exec(curl.exe)"
+      "Exec(curl.exe)",
+      "Exec(Select-Object)"
     ]
   }
 }

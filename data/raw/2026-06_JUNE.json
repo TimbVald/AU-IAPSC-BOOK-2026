@@ -1,0 +1,59 @@
+{
+  "file": "June 2026 activities matrix.docm",
+  "month_title": "JUNE 2026",
+  "month": "JUNE",
+  "month_num": 6,
+  "year": 2026,
+  "period": "2026-06",
+  "headers": [
+    "Dates & Time",
+    "Venue",
+    "Staff concerned",
+    "Activity",
+    "Objectives, Expected Outcomes",
+    "Status of report"
+  ],
+  "activities": [
+    {
+      "date": "Thursday 04 11:00-12:00.",
+      "venue": "Online",
+      "staff": "Coordinator",
+      "activity": "Invitation: APHEWS Contract Discussion",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Tuesday 09 10 Am",
+      "venue": "Meeting Hall",
+      "staff": "All staff",
+      "activity": "AU-IAPSC Staff Monthly Meeting",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "16 au 18",
+      "venue": "Libreville-Gabon",
+      "staff": "",
+      "activity": "Atelier Régional de Domestication de la Déclaration de Kamapala par les Etats Membres de la CEEAC et de Validation de la Stratégie Régional de Développement de la Riziculture en Afrique Centrale",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "30 June to 02 July",
+      "venue": "Geneva - Switzerland",
+      "staff": "Coordinator",
+      "activity": "STDF Working Group Meeting",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Wednesday 03 June",
+      "venue": "Addis Ababa-Ethiopia",
+      "staff": "SSO-P",
+      "activity": "APP TOT  Preparatory Meeting,",
+      "objectives_outcomes": "",
+      "status": ""
+    }
+  ],
+  "trailing_notes": []
+}

@@ -1,0 +1,75 @@
+{
+  "file": "September 2026 activities matrix.docm",
+  "month_title": "SEPTEMBER 2026",
+  "month": "SEPTEMBER",
+  "month_num": 9,
+  "year": 2026,
+  "period": "2026-09",
+  "headers": [
+    "Dates & Time",
+    "Venue",
+    "Staff concerned",
+    "Activity",
+    "Objectives, Expected Outcomes",
+    "Status of report"
+  ],
+  "activities": [
+    {
+      "date": "Monday 31 August–4 September 2026,",
+      "venue": "Kigali, Rwanda",
+      "staff": "Coordinator",
+      "activity": "The Africa Food Systems Forum (AFSF) 2026",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Thursday 10",
+      "venue": "Conference Hall",
+      "staff": "All staff",
+      "activity": "AU-IAPSC Staff Meeting",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Monday 14 to Thursday 17",
+      "venue": "KEPHIS Headquarters, Nairobi-Kenya",
+      "staff": "Coordinator & SSOP",
+      "activity": "The International Phytosanitary and Seed Quality Conference,",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Tuesday 15 to Friday 18",
+      "venue": "Harare, Zimbabwe",
+      "staff": "SSOE",
+      "activity": "The (AUC-ARBE) 22nd Annual Comprehensive Africa Agriculture Development Programme Partnership Platform (CAADP-PP) Meeting",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Monday 14 to Saturday 19",
+      "venue": "Yaounde",
+      "staff": "MIS Staff & AU-IAPSC Staff",
+      "activity": "Network Infrastructure Assessment Mission at AU-IAPSC Office",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "Monday 21 to Wednesday 23",
+      "venue": "Kribi, Cameroon",
+      "staff": "All Staff",
+      "activity": "AU-IAPSC Staff Team-building Workshop",
+      "objectives_outcomes": "",
+      "status": ""
+    },
+    {
+      "date": "27 September to 02",
+      "venue": "Jamaica",
+      "staff": "Coordinator & SSOP",
+      "activity": "The 20th Caribbean Week of Agriculture (CWA 20)",
+      "objectives_outcomes": "",
+      "status": ""
+    }
+  ],
+  "trailing_notes": []
+}

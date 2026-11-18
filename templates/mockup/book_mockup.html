@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>AU-IAPSC — Livre des Activités 2026 — Maquette</title>
+<style>
+@font-face { font-family:'Archivo'; src:url('static/fonts/Archivo-500.ttf'); font-weight:500; }
+@font-face { font-family:'Archivo'; src:url('static/fonts/Archivo-600.ttf'); font-weight:600; }
+@font-face { font-family:'Archivo'; src:url('static/fonts/Archivo-700.ttf'); font-weight:700; }
+@font-face { font-family:'Archivo'; src:url('static/fonts/Archivo-800.ttf'); font-weight:800; }
+@font-face { font-family:'Archivo'; src:url('static/fonts/Archivo-900.ttf'); font-weight:900; }
+@font-face { font-family:'Source Serif 4'; src:url('static/fonts/Source_Serif_4-400.ttf'); font-weight:400; }
+@font-face { font-family:'Source Serif 4'; src:url('static/fonts/Source_Serif_4-600.ttf'); font-weight:600; }
+@font-face { font-family:'Source Serif 4'; src:url('static/fonts/Source_Serif_4-700.ttf'); font-weight:700; }
+@font-face { font-family:'Marcellus'; src:url('static/fonts/Marcellus-400.ttf'); font-weight:400; }
+
+:root{
+  --green:#1E7A44; --green2:#3FAD49; --deep:#0B3D24; --char:#263338;
+  --bordeaux:#92203A; --bordeaux2:#7D122C; --yellow:#FFF200;
+  --pale:#F2F9F9; --mist:#EAF4EE; --gray:#8A9A94; --line:#D8E2DC;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+@page{size:A4;margin:0;}
+body{font-family:'Source Serif 4',serif;color:var(--char);}
+.page{width:210mm;height:297mm;page-break-after:always;position:relative;overflow:hidden;}
+.page:last-child{page-break-after:auto;}
+
+/* ============ PAGE 1 — COUVERTURE ============ */
+.cover{background:linear-gradient(160deg,#0B3D24 0%,#14532D 55%,#1E7A44 100%);color:#fff;
+  display:flex;flex-direction:column;}
+.cover .mast{display:flex;justify-content:space-between;align-items:flex-start;
+  padding:16mm 18mm 0;}
+.cover .mast .org{font-family:'Archivo';font-weight:700;font-size:8.5pt;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--yellow);}
+.cover .mast .org small{display:block;font-weight:500;color:#BFE3CC;font-size:7pt;
+  letter-spacing:.08em;margin-top:2mm;}
+.cover .mast .issue{font-family:'Archivo';font-weight:600;font-size:8pt;color:#BFE3CC;
+  text-align:right;letter-spacing:.1em;text-transform:uppercase;}
+.cover .hero{flex:1;display:flex;flex-direction:column;justify-content:center;
+  padding:0 18mm;}
+.cover .kicker{font-family:'Archivo';font-weight:600;font-size:10pt;letter-spacing:.32em;
+  color:var(--yellow);text-transform:uppercase;margin-bottom:8mm;}
+.cover h1{font-family:'Marcellus',serif;font-weight:400;font-size:52pt;line-height:1.02;
+  color:#fff;}
+.cover h1 em{font-style:normal;color:var(--yellow);}
+.cover .sub{margin-top:10mm;font-family:'Archivo';font-weight:500;font-size:12.5pt;
+  color:#DFF0E4;letter-spacing:.04em;}
+.cover .period{margin-top:4mm;font-family:'Archivo';font-weight:700;font-size:15pt;
+  color:#fff;letter-spacing:.06em;}
+.cover .period::before{content:"";display:inline-block;width:14mm;height:1.4mm;
+  background:var(--yellow);vertical-align:middle;margin-right:4mm;}
+.cover .foot{padding:0 18mm 14mm;display:flex;justify-content:space-between;
+  align-items:flex-end;}
+.cover .foot .edition{font-family:'Archivo';font-size:8pt;color:#9FC7AB;
+  letter-spacing:.08em;text-transform:uppercase;line-height:1.7;}
+.cover .foot .rule{height:1mm;background:linear-gradient(90deg,var(--yellow),transparent);
+  width:60mm;margin-bottom:6mm;}
+.cover .photo{height:52mm;width:100%;object-fit:cover;object-position:center 30%;
+  border-top:1.2mm solid var(--yellow);}
+
+/* ============ PAGE 2 — STATISTIQUES ============ */
+.stats{padding:16mm 16mm 12mm;background:var(--pale);}
+.phead{display:flex;justify-content:space-between;align-items:baseline;
+  border-bottom:2.2mm solid var(--green);padding-bottom:4mm;margin-bottom:7mm;}
+.phead .kick{font-family:'Archivo';font-weight:700;font-size:8pt;letter-spacing:.28em;
+  color:var(--green);text-transform:uppercase;}
+.phead h2{font-family:'Archivo';font-weight:800;font-size:24pt;color:var(--char);
+  letter-spacing:-.01em;}
+.phead .num{font-family:'Marcellus';font-size:13pt;color:var(--bordeaux);}
+.kpis{display:flex;gap:5mm;margin-bottom:8mm;}
+.kpi{flex:1;background:#fff;border:1px solid var(--line);border-top:3mm solid var(--green);
+  padding:6mm 5mm 5mm;}
+.kpi.alt{border-top-color:var(--bordeaux);}
+.kpi.yellow{border-top-color:#E6C800;}
+.kpi .v{font-family:'Archivo';font-weight:800;font-size:26pt;color:var(--deep);line-height:1;}
+.kpi.alt .v{color:var(--bordeaux);}
+.kpi.yellow .v{color:#8a7400;}
+.kpi .l{font-family:'Archivo';font-weight:600;font-size:7.5pt;color:var(--gray);
+  text-transform:uppercase;letter-spacing:.1em;margin-top:3mm;line-height:1.5;}
+.grid2{display:flex;gap:6mm;}
+.card{flex:1;background:#fff;border:1px solid var(--line);padding:6mm;}
+.card h3{font-family:'Archivo';font-weight:700;font-size:10.5pt;color:var(--green);
+  text-transform:uppercase;letter-spacing:.12em;margin-bottom:4mm;
+  padding-bottom:2.5mm;border-bottom:.7mm solid var(--mist);}
+.card img{width:100%;display:block;}
+.footnote{margin-top:6mm;font-family:'Archivo';font-size:7pt;color:var(--gray);
+  line-height:1.6;border-top:.4mm solid var(--line);padding-top:3mm;}
+
+/* ============ PAGE 3 — OUVERTURE MOIS ============ */
+.month{background:var(--deep);color:#fff;height:100%;display:flex;flex-direction:column;}
+.month .top{display:flex;justify-content:space-between;align-items:center;
+  padding:12mm 16mm 0;font-family:'Archivo';font-weight:600;font-size:8pt;
+  letter-spacing:.3em;color:#9FC7AB;text-transform:uppercase;}
+.month .ghost{font-family:'Archivo';font-weight:900;font-size:88pt;line-height:.95;
+  letter-spacing:-.02em;padding:8mm 16mm 0;color:rgba(255,255,255,.10);}
+.month .title{padding:2mm 16mm 0;}
+.month .title h2{font-family:'Marcellus';font-weight:400;font-size:34pt;color:#fff;}
+.month .title .fr{font-family:'Archivo';font-weight:500;font-size:11pt;color:#BFE3CC;
+  margin-top:1.5mm;letter-spacing:.05em;}
+.month .count{display:inline-block;margin:6mm 16mm 0;background:var(--yellow);
+  color:var(--deep);font-family:'Archivo';font-weight:800;font-size:10pt;
+  letter-spacing:.12em;text-transform:uppercase;padding:2.5mm 6mm;}
+.month .events{flex:1;padding:9mm 16mm 0;}
+.month .events h4{font-family:'Archivo';font-weight:700;font-size:9pt;
+  letter-spacing:.24em;color:var(--yellow);text-transform:uppercase;margin-bottom:5mm;}
+.month .ev{display:flex;gap:5mm;padding:4.5mm 0;border-bottom:.4mm solid rgba(255,255,255,.14);}
+.month .ev:last-child{border-bottom:none;}
+.month .ev .d{font-family:'Archivo';font-weight:700;font-size:8.5pt;color:var(--yellow);
+  width:30mm;flex-shrink:0;padding-top:1mm;}
+.month .ev .t{font-family:'Source Serif 4';font-size:11pt;color:#EAF4EE;line-height:1.45;}
+.month .photo{height:60mm;width:100%;object-fit:cover;object-position:center 35%;
+  border-top:1.2mm solid var(--yellow);}
+.month .pfoot{padding:5mm 16mm 9mm;display:flex;justify-content:space-between;
+  font-family:'Archivo';font-size:7.5pt;color:#9FC7AB;letter-spacing:.1em;
+  text-transform:uppercase;}
+
+/* ============ PAGE 4 — FICHE ACTIVITÉ ============ */
+.fiche{padding:14mm 16mm 10mm;}
+.fiche .crumb{font-family:'Archivo';font-weight:600;font-size:8pt;letter-spacing:.26em;
+  color:var(--green);text-transform:uppercase;margin-bottom:5mm;}
+.fiche h2{font-family:'Archivo';font-weight:800;font-size:21pt;line-height:1.15;
+  color:var(--deep);margin-bottom:7mm;max-width:150mm;}
+.fiche h2 .tag{display:inline-block;background:var(--yellow);color:var(--deep);
+  font-family:'Archivo';font-weight:800;font-size:8pt;letter-spacing:.14em;
+  text-transform:uppercase;padding:1.6mm 4mm;vertical-align:middle;margin-left:4mm;}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);
+  margin-bottom:8mm;}
+.meta .cell{padding:4.5mm 5mm;border-bottom:.4mm solid var(--line);}
+.meta .cell:nth-child(odd){border-right:.4mm solid var(--line);}
+.meta .cell:nth-last-child(-n+2){border-bottom:none;}
+.meta .k{font-family:'Archivo';font-weight:700;font-size:7pt;letter-spacing:.2em;
+  color:var(--green);text-transform:uppercase;margin-bottom:1.8mm;}
+.meta .v{font-family:'Source Serif 4';font-size:10.5pt;line-height:1.45;color:var(--char);}
+.cols{display:flex;gap:8mm;}
+.story{flex:1.5;}
+.story p{font-size:10.5pt;line-height:1.72;text-align:justify;margin-bottom:4mm;}
+.story p:first-child::first-letter{font-family:'Marcellus';font-size:34pt;
+  font-size:30pt;line-height:.85;color:var(--green);padding-right:1mm;}
+.side{flex:1;}
+.side .box{background:var(--mist);border-left:3mm solid var(--green);padding:6mm;margin-bottom:6mm;}
+.side .box h4{font-family:'Archivo';font-weight:700;font-size:8.5pt;letter-spacing:.2em;
+  color:var(--green);text-transform:uppercase;margin-bottom:3mm;}
+.side .box ul{list-style:none;}
+.side .box li{font-family:'Source Serif 4';font-size:9.5pt;line-height:1.55;
+  padding:2mm 0 2mm 5mm;position:relative;color:var(--char);}
+.side .box li::before{content:"";position:absolute;left:0;top:4.2mm;width:2.4mm;
+  height:2.4mm;background:var(--green2);border-radius:50%;}
+.photofig{margin-top:2mm;}
+.photofig img{width:100%;height:64mm;object-fit:cover;display:block;}
+.photofig figcaption{font-family:'Archivo';font-size:7.5pt;color:var(--gray);
+  padding-top:2mm;letter-spacing:.04em;}
+.fiche .pfoot{position:absolute;bottom:9mm;left:16mm;right:16mm;
+  display:flex;justify-content:space-between;font-family:'Archivo';font-size:7.5pt;
+  color:var(--gray);letter-spacing:.1em;text-transform:uppercase;
+  border-top:.4mm solid var(--line);padding-top:3mm;}
+
+/* ============ PAGE 5 — FAITS MARQUANTS ============ */
+.storypage{padding:14mm 16mm 12mm;}
+.storypage .crumb{font-family:'Archivo';font-weight:600;font-size:8pt;letter-spacing:.26em;
+  color:var(--bordeaux);text-transform:uppercase;margin-bottom:4mm;}
+.storypage h2{font-family:'Marcellus';font-weight:400;font-size:30pt;color:var(--deep);
+  line-height:1.1;margin-bottom:6mm;}
+.storypage .lead{font-family:'Source Serif 4';font-size:12pt;line-height:1.7;
+  color:var(--char);margin-bottom:7mm;max-width:160mm;}
+.storypage .lead strong{color:var(--green);}
+.pull{background:var(--deep);color:#fff;padding:7mm 8mm;margin-bottom:7mm;
+  border-left:4mm solid var(--yellow);}
+.pull p{font-family:'Marcellus';font-size:15pt;line-height:1.4;}
+.pull .who{font-family:'Archivo';font-weight:600;font-size:7.5pt;color:#9FC7AB;
+  letter-spacing:.14em;text-transform:uppercase;margin-top:3mm;}
+.duo{display:table;width:100%;}
+.duo .col{display:table-cell;width:50%;vertical-align:top;}`n.duo .col:first-child{padding-right:6mm;}
+.duo .col p{font-size:10pt;line-height:1.7;text-align:justify;margin-bottom:4mm;}
+.duo .col p:first-child::first-letter{font-family:'Marcellus';font-size:30pt;
+  font-size:30pt;line-height:.85;color:var(--bordeaux);padding-right:1mm;}
+.duo figure{margin-top:5mm;}
+.duo figure img{width:100%;height:56mm;object-fit:cover;display:block;}
+.duo figcaption{font-family:'Archivo';font-size:7.5pt;color:var(--gray);
+  padding-top:2mm;letter-spacing:.04em;}
+.storypage .pfoot{margin-top:6mm;display:flex;justify-content:space-between;
+  font-family:'Archivo';font-size:7.5pt;color:var(--gray);letter-spacing:.1em;
+  text-transform:uppercase;border-top:.4mm solid var(--line);padding-top:3mm;}
+</style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1 : COUVERTURE ==================== -->
+<div class="page cover">
+  <div class="mast">
+    <div class="org">Inter-African Phytosanitary Council<small>Conseil Phytosanitaire Interafricain — Union Africaine</small></div>
+    <div class="issue">Publication institutionnelle<br>Édition 2026</div>
+  </div>
+  <div class="hero">
+    <div class="kicker">Activités · Missions · Partenariats</div>
+    <h1>Livre des<br><em>Activités</em></h1>
+    <div class="sub">Une année de mobilisation pour la santé végétale en Afrique</div>
+    <div class="period">Février — Novembre 2026</div>
+  </div>
+  <div class="foot">
+    <div class="rule"></div>
+    <div class="edition">AU-IAPSC — Agriculture, Rural Development,<br>Blue Economy &amp; Sustainable Environment (ARBE)<br>Yaoundé, Cameroun · 2026</div>
+  </div>
+  <img class="photo" src="static/images/mockup/nl_p18_x284.png" alt="">
+</div>
+
+<!-- ==================== PAGE 2 : STATISTIQUES ==================== -->
+<div class="page">
+  <div class="stats">
+    <div class="phead">
+      <div>
+        <div class="kick">Tableau de bord</div>
+        <h2>L'année en chiffres</h2>
+      </div>
+      <div class="num">02 / 10</div>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="v">117</div><div class="l">Activités documentées<br>dans les matrices</div></div>
+      <div class="kpi alt"><div class="v">20</div><div class="l">Pays / lieux distincts<br>identifiés</div></div>
+      <div class="kpi yellow"><div class="v">70</div><div class="l">Activités en présentiel<br>sur le territoire</div></div>
+      <div class="kpi"><div class="v">45</div><div class="l">Activités à distance<br>(en ligne)</div></div>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <h3>Activités par mois</h3>
+        <img src="static/charts/activities_per_month.png">
+      </div>
+      <div class="card">
+        <h3>Modalités de tenue</h3>
+        <img src="static/charts/format_donut.png">
+      </div>
+    </div>
+    <div class="grid2" style="margin-top:6mm;">
+      <div class="card">
+        <h3>Principaux lieux d'activités</h3>
+        <img src="static/charts/top_countries.png">
+      </div>
+      <div class="card">
+        <h3>Note méthodologique</h3>
+        <p style="font-size:9pt;line-height:1.65;color:var(--char);">
+          Les comptages sont issus des matrices mensuelles d'activités (.docm)
+          couvrant février à novembre 2026. <strong>Octobre 2026 est absent des
+          sources</strong> : les totaux portent sur 9 mois documentés.
+          La classification par pays et par type repose sur une analyse
+          heuristique des champs « Venue » et « Activity » — à valider avant
+          publication. Aucune donnée n'a été estimée ou complétée.</p>
+      </div>
+    </div>
+    <div class="footnote">AU-IAPSC · Livre des Activités 2026 — Données issues des matrices mensuelles de coordination</div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 3 : OUVERTURE MOIS — AOÛT ==================== -->
+<div class="page month">
+  <div class="top"><span>AU-IAPSC · Livre des Activités 2026</span><span>Chapitre mensuel</span></div>
+  <div class="ghost">AOÛT</div>
+  <div class="title">
+    <h2>Août 2026</h2>
+    <div class="fr">Mois de la diplomatie phytosanitaire continentale</div>
+  </div>
+  <div class="count">13 activités documentées</div>
+  <div class="events">
+    <h4>Moments clés du mois</h4>
+    <div class="ev"><div class="d">04–07 AOÛT</div><div class="t">Atelier régional IPPC pour l'Afrique — Libreville, Gabon</div></div>
+    <div class="ev"><div class="d">17–21 AOÛT</div><div class="t">Forum Alimentaire Africain (AFSF) 2026 — Kigali, Rwanda</div></div>
+    <div class="ev"><div class="d">12–28 AOÛT</div><div class="t">Deux ateliers de renforcement des capacités — Barry Callebaut, Yaoundé</div></div>
+    <div class="ev"><div class="d">17–21 AOÛT</div><div class="t">Feuille de route continentale — réunion de co-création, Mombasa, Kenya</div></div>
+    <div class="ev"><div class="d">26 AOÛT</div><div class="t">Visite de la délégation du Parlement Panafricain au siège de l'AU-IAPSC</div></div>
+  </div>
+  <img class="photo" src="static/images/mockup/nl_p09_x117.png" alt="">
+  <div class="pfoot"><span>Libreville · Kigali · Yaoundé · Mombasa</span><span>p. 03</span></div>
+</div>
+
+<!-- ==================== PAGE 4 : FICHE ACTIVITÉ ==================== -->
+<div class="page">
+  <div class="fiche">
+    <div class="crumb">Août 2026 · Fiche activité · Atelier régional</div>
+    <h2>Atelier régional de la CIPV pour l'Afrique<span class="tag">Réalisée</span></h2>
+    <div class="meta">
+      <div class="cell"><div class="k">Date</div><div class="v">Mardi 4 au vendredi 7 août 2026</div></div>
+      <div class="cell"><div class="k">Lieu</div><div class="v">Libreville, République du Gabon</div></div>
+      <div class="cell"><div class="k">Format</div><div class="v">Présentiel</div></div>
+      <div class="cell"><div class="k">Personnel concerné</div><div class="v">Coordonnatrice ; SSO-P ; SSO-E ; Secrétaire / Assistante finance</div></div>
+    </div>
+    <div class="cols">
+      <div class="story">
+        <p>L'Atelier régional 2026 de la Convention internationale pour la
+        protection des végétaux (CIPV) s'est tenu à Libreville, au Gabon, du
+        4 au 7 août 2026. L'AU-IAPSC y a représenté l'Union africaine aux
+        côtés des organisations régionales de protection des végétaux, dans la
+        continuité de son mandat de coordination phytosanitaire continental.</p>
+        <p>La veille, le 3 août, des rencontres préparatoires ont réuni la
+        Commission de l'Agriculture de la CEEAC, le Secrétariat de la CIPV et
+        la FAO pour la sous-région d'Afrique centrale, afin d'aligner les
+        positions avant l'ouverture des travaux.</p>
+        <figure class="photofig">
+          <img src="static/images/mockup/nl_p06_x89.png" alt="">
+          <figcaption>Rencontre institutionnelle — Libreville, août 2026. © AU-IAPSC</figcaption>
+        </figure>
+      </div>
+      <div class="side">
+        <div class="box">
+          <h4>Cadre &amp; partenaires</h4>
+          <ul>
+            <li>Convention internationale pour la protection des végétaux (CIPV)</li>
+            <li>Commission de l'Agriculture — CEEAC</li>
+            <li>FAO, sous-région d'Afrique centrale</li>
+            <li>ONPV des États membres</li>
+          </ul>
+        </div>
+        <div class="box" style="border-left-color:var(--bordeaux);background:#FBF1F3;">
+          <h4 style="color:var(--bordeaux);">Objectifs annoncés</h4>
+          <p style="font-size:9.5pt;line-height:1.6;">Non renseigné dans la
+          matrice source — à compléter avant publication.</p>
+        </div>
+        <div class="box" style="border-left-color:var(--yellow);background:#FFFBEA;">
+          <h4 style="color:#8a7400;">Statut</h4>
+          <p style="font-size:9.5pt;line-height:1.6;">Activité documentée dans
+          la matrice d'août 2026. Résultats non renseignés dans la source.</p>
+        </div>
+      </div>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Livre des Activités 2026</span><span>04</span></div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 5 : FAITS MARQUANTS ==================== -->
+<div class="page">
+  <div class="storypage">
+    <div class="crumb">Synthèse · Faits marquants</div>
+    <h2>Une année de mobilisation phytosanitaire</h2>
+    <p class="lead">De <strong>février à novembre 2026</strong>, l'AU-IAPSC a
+    documenté <strong>117 activités</strong> de coordination : instances de
+    gouvernance, ateliers techniques, missions et consultations internationales.
+    La période a été marquée par trois rendez-vous continentaux majeurs.</p>
+    <div class="pull">
+      <p>« La santé des végétaux est un pilier de la souveraineté
+      alimentaire africaine. »</p>
+      <div class="who">— Esprit de la délégation AU-IAPSC, atelier CIPV Libreville</div>
+    </div>
+    <div class="duo">
+      <div class="col">
+        <p>En mars, la délégation a porté la voix de l'Afrique à la
+        <strong>20ᵉ session de la Conférence des Parties (CPM 20)</strong> de la
+        CIPV à Rome, puis à la 5ᵉ réunion du sous-comité SPS de l'AfCFTA à
+        Nairobi et au chantier de domestication des lignes directrices de La
+        Havane à Yaoundé.</p>
+        <p>Le second semestre a consolidé l'élan : lancement du projet STDF sur
+        le bunchy top de la bananier en février, Phase 3 du Programme
+        Phytosanitaire Africain à Addis-Abeba en juillet, et atelier régional
+        CIPV à Libreville en août.</p>
+        <figure>
+          <img src="static/images/mockup/nl_p25_x387.png" alt="">
+          <figcaption>Session de travail — atelier régional, Libreville 2026. © AU-IAPSC</figcaption>
+        </figure>
+      </div>
+      <div class="col">
+        <p>Le mois d'août a concentré la diplomatie phytosanitaire : atelier
+        régional CIPV à Libreville, Forum Alimentaire Africain à Kigali,
+        feuille de route continentale à Mombasa et deux sessions de
+        renforcement des capacités à Yaoundé.</p>
+        <p>Novembre a prolongé la mobilisation avec la consultation
+        GreenPass sur les semences à Nairobi, le Groupe de travail STDF à
+        Genève, le Forum sur le Commerce et le Développement en Afrique à
+        Addis-Abeba et le kick-off technologique à Séoul.</p>
+        <figure>
+          <img src="static/images/mockup/nl_p04_x55.png" alt="">
+          <figcaption>Réunion de coordination — siège de l'AU-IAPSC, Yaoundé. © AU-IAPSC</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Livre des Activités 2026</span><span>05</span></div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,603 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>AU-IAPSC — Livre des Activités 2026</title>
+<style>
+@font-face{font-family:'Archivo';src:url('static/fonts/Archivo-500.ttf');font-weight:500}
+@font-face{font-family:'Archivo';src:url('static/fonts/Archivo-600.ttf');font-weight:600}
+@font-face{font-family:'Archivo';src:url('static/fonts/Archivo-700.ttf');font-weight:700}
+@font-face{font-family:'Archivo';src:url('static/fonts/Archivo-800.ttf');font-weight:800}
+@font-face{font-family:'Archivo';src:url('static/fonts/Archivo-900.ttf');font-weight:900}
+@font-face{font-family:'Source Serif 4';src:url('static/fonts/Source_Serif_4-400.ttf');font-weight:400}
+@font-face{font-family:'Source Serif 4';src:url('static/fonts/Source_Serif_4-600.ttf');font-weight:600}
+@font-face{font-family:'Source Serif 4';src:url('static/fonts/Source_Serif_4-700.ttf');font-weight:700}
+@font-face{font-family:'Marcellus';src:url('static/fonts/Marcellus-400.ttf');font-weight:400}
+:root{--green:#1E7A44;--green2:#3FAD49;--deep:#0B3D24;--char:#263338;--bordeaux:#92203A;--bordeaux2:#7D122C;--yellow:#FFF200;--pale:#F2F9F9;--mist:#EAF4EE;--gray:#8A9A94;--line:#D8E2DC}
+*{margin:0;padding:0;box-sizing:border-box}
+@page{size:A4;margin:0}
+body{font-family:'Source Serif 4',serif;color:var(--char)}
+.page{width:210mm;height:297mm;page-break-after:always;position:relative;overflow:hidden}
+.page:last-child{page-break-after:auto}
+.pfoot{position:absolute;bottom:8mm;left:16mm;right:16mm;display:flex;justify-content:space-between;font-family:'Archivo';font-size:7pt;color:var(--gray);letter-spacing:.1em;text-transform:uppercase;border-top:.4mm solid var(--line);padding-top:2.5mm}
+/* newsletter masthead on content pages */
+.mtop{position:absolute;top:8mm;left:16mm;right:16mm;display:flex;justify-content:space-between;align-items:center;border-bottom:.6mm solid var(--line);padding-bottom:2.5mm}
+.mtop img{height:8.5mm;width:auto}
+.mtop .org{font-family:'Archivo';font-weight:700;font-size:7pt;letter-spacing:.12em;color:var(--deep);text-transform:uppercase}
+.mtop .org small{display:block;font-weight:500;color:var(--gray);font-size:5.8pt;letter-spacing:.08em;margin-top:.6mm}
+.mtop .doc{font-family:'Archivo';font-weight:600;font-size:7pt;color:var(--green);letter-spacing:.14em;text-transform:uppercase;text-align:right}
+.ph{padding:21mm 16mm 9mm}
+.kick{font-family:'Archivo';font-weight:700;font-size:7.5pt;letter-spacing:.26em;color:var(--green);text-transform:uppercase}
+.kick.b{color:var(--bordeaux)}
+h2.pt{font-family:'Archivo';font-weight:800;font-size:21pt;color:var(--deep);line-height:1.12;margin:2.5mm 0 5mm}
+.rule{height:1.1mm;background:linear-gradient(90deg,var(--green),var(--yellow) 60%,transparent);width:52mm;margin-bottom:6mm}
+/* cover — full-bleed image like the reference newsletter */
+.cover{background:linear-gradient(160deg,#0B3D24 0%,#14532D 55%,#1E7A44 100%);color:#fff;display:flex;flex-direction:column}
+.coverbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cover-shade{position:absolute;inset:0;background:linear-gradient(165deg,rgba(11,61,36,.95) 0%,rgba(11,61,36,.80) 48%,rgba(30,122,68,.45) 100%)}
+.cover .mast,.cover .hero,.cover .foot,.cover .cover-stats{position:relative;z-index:2}
+.cover .cover-stats{display:flex;border-top:1.2mm solid var(--yellow);background:rgba(11,61,36,.5);margin-top:auto}
+.cstat{flex:1;padding:4.5mm 5mm;border-right:.4mm solid rgba(255,255,255,.18)}
+.cstat:last-child{border-right:none}
+.cstat .v{font-family:'Marcellus',serif;font-size:21pt;color:#fff;line-height:1}
+.cstat .l{font-family:'Archivo';font-weight:600;font-size:6.3pt;color:#BFE3CC;text-transform:uppercase;letter-spacing:.1em;margin-top:1.6mm;line-height:1.55}
+.cover .mast{display:flex;justify-content:space-between;align-items:flex-start;padding:14mm 18mm 0}
+.cover .mast img{height:20mm;width:auto}
+.cover .mast .org{font-family:'Archivo';font-weight:700;font-size:8pt;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);text-align:right}
+.cover .mast .org small{display:block;font-weight:500;color:#BFE3CC;font-size:6.5pt;letter-spacing:.08em;margin-top:2mm}
+.cover .hero{flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 18mm}
+.cover .kicker{font-family:'Archivo';font-weight:600;font-size:9.5pt;letter-spacing:.32em;color:var(--yellow);text-transform:uppercase;margin-bottom:7mm}
+.cover h1{font-family:'Marcellus',serif;font-weight:400;font-size:48pt;line-height:1.02;color:#fff}
+.cover h1 em{font-style:normal;color:var(--yellow)}
+.cover .sub{margin-top:9mm;font-family:'Archivo';font-weight:500;font-size:12pt;color:#DFF0E4;letter-spacing:.04em}
+.cover .period{margin-top:4mm;font-family:'Archivo';font-weight:700;font-size:14.5pt;color:#fff;letter-spacing:.06em}
+.cover .period::before{content:"";display:inline-block;width:14mm;height:1.4mm;background:var(--yellow);vertical-align:middle;margin-right:4mm}
+.cover .badge{display:inline-block;margin-top:5mm;background:var(--yellow);color:var(--deep);font-family:'Archivo';font-weight:800;font-size:8.5pt;letter-spacing:.14em;text-transform:uppercase;padding:2mm 5mm;width:fit-content}
+.cover .foot{padding:0 18mm 13mm;display:flex;justify-content:space-between;align-items:flex-end}
+.cover .edition{font-family:'Archivo';font-size:7.5pt;color:#9FC7AB;letter-spacing:.08em;text-transform:uppercase;line-height:1.7}
+.cover .photo{height:50mm;width:100%;object-fit:cover;object-position:center 30%;border-top:1.2mm solid var(--yellow)}
+/* text pages */
+.txt{font-size:10.5pt;line-height:1.72;text-align:justify}
+.txt p{margin-bottom:4mm}
+.txt p:first-child::first-letter{font-family:'Marcellus';font-size:30pt;line-height:.85;color:var(--green);padding-right:1mm}
+.cols2{display:table;width:100%}
+.cols2 .col{display:table-cell;width:50%;vertical-align:top}
+.cols2 .col:first-child{padding-right:7mm}
+.box{background:var(--mist);border-left:3mm solid var(--green);padding:5mm;margin:4mm 0}
+.box.b{background:#FBF1F3;border-left-color:var(--bordeaux)}
+.box h4{font-family:'Archivo';font-weight:700;font-size:8pt;letter-spacing:.2em;text-transform:uppercase;margin-bottom:2.5mm;color:var(--green)}
+.box.b h4{color:var(--bordeaux)}
+.box p,.box li{font-size:9.5pt;line-height:1.6}
+.box ul{list-style:none}
+.box li{padding:1.5mm 0 1.5mm 5mm;position:relative}
+.box li::before{content:"";position:absolute;left:0;top:3.6mm;width:2.2mm;height:2.2mm;background:var(--green2);border-radius:50%}
+.pull{background:var(--deep);color:#fff;padding:6mm 7mm;margin:5mm 0;border-left:4mm solid var(--yellow)}
+.pull p{font-family:'Marcellus';font-size:14.5pt;line-height:1.4}
+.pull .who{font-family:'Archivo';font-weight:600;font-size:7pt;color:#9FC7AB;letter-spacing:.14em;text-transform:uppercase;margin-top:2.5mm}
+figure.ph{margin:4mm 0}
+figure.ph img{width:100%;height:60mm;object-fit:cover;display:block}
+figure.ph figcaption{font-family:'Archivo';font-size:7.5pt;color:var(--gray);padding-top:2mm;letter-spacing:.04em}
+/* sommaire */
+.toc{padding:15mm 18mm}
+.toc .part{margin-bottom:6mm}
+.toc .part .t{font-family:'Archivo';font-weight:800;font-size:13pt;color:var(--deep)}
+.toc .part .d{font-family:'Archivo';font-size:8.5pt;color:var(--gray);letter-spacing:.06em;margin-top:1mm}
+.toc .chap{margin:2.5mm 0 2.5mm 8mm;font-family:'Source Serif 4';font-size:10pt;color:var(--char)}
+.toc .chap b{font-family:'Archivo';font-weight:600;color:var(--green);margin-right:3mm}
+/* stats */
+.kpis{display:flex;gap:4mm;margin-bottom:4mm}
+.kpi{flex:1;background:#fff;border:1px solid var(--line);border-top:3mm solid var(--green);padding:4mm 3.5mm 3.5mm}
+.kpi.a{border-top-color:var(--bordeaux)}.kpi.y{border-top-color:#E6C800}
+.kpi .v{font-family:'Archivo';font-weight:800;font-size:21pt;color:var(--deep);line-height:1}
+.kpi.a .v{color:var(--bordeaux)}.kpi.y .v{color:#8a7400}
+.kpi .l{font-family:'Archivo';font-weight:600;font-size:6.5pt;color:var(--gray);text-transform:uppercase;letter-spacing:.07em;margin-top:2.2mm;line-height:1.5}
+.g2{display:table;width:100%}
+.g2 .gc{display:table-cell;width:50%;vertical-align:top;padding-right:5mm}
+.g2 .gc:last-child{padding-right:0;padding-left:5mm}
+.gc h3{font-family:'Archivo';font-weight:700;font-size:9pt;color:var(--green);text-transform:uppercase;letter-spacing:.12em;margin-bottom:3mm;padding-bottom:2mm;border-bottom:.7mm solid var(--mist)}
+.gc img{width:100%}
+/* month opener */
+.month{background:var(--deep);color:#fff;height:100%;display:flex;flex-direction:column}
+.month .top{display:flex;justify-content:space-between;padding:11mm 16mm 0;font-family:'Archivo';font-weight:600;font-size:7.5pt;letter-spacing:.3em;color:#9FC7AB;text-transform:uppercase}
+.month .ghost{font-family:'Archivo';font-weight:900;font-size:80pt;line-height:.95;letter-spacing:-.02em;padding:6mm 16mm 0;color:rgba(255,255,255,.10)}
+.month .title{padding:1mm 16mm 0}
+.month .title h2{font-family:'Marcellus';font-weight:400;font-size:32pt;color:#fff}
+.month .title .fr{font-family:'Archivo';font-weight:500;font-size:10.5pt;color:#BFE3CC;margin-top:1.5mm}
+.month .count{display:inline-block;margin:5mm 16mm 0;background:var(--yellow);color:var(--deep);font-family:'Archivo';font-weight:800;font-size:9.5pt;letter-spacing:.12em;text-transform:uppercase;padding:2.2mm 5.5mm}
+.month .events{flex:1;padding:7mm 16mm 0;overflow:hidden}
+.month .events h4{font-family:'Archivo';font-weight:700;font-size:8.5pt;letter-spacing:.24em;color:var(--yellow);text-transform:uppercase;margin-bottom:4mm}
+.month .ev{display:flex;gap:5mm;padding:3.8mm 0;border-bottom:.4mm solid rgba(255,255,255,.14)}
+.month .ev:last-child{border-bottom:none}
+.month .ev .d{font-family:'Archivo';font-weight:700;font-size:8pt;color:var(--yellow);width:32mm;flex-shrink:0;padding-top:1mm}
+.month .ev .t{font-family:'Source Serif 4';font-size:10.5pt;color:#EAF4EE;line-height:1.45}
+.month .photo{height:56mm;width:100%;object-fit:cover;object-position:center 35%;border-top:1.2mm solid var(--yellow)}
+.month .pfoot{padding:4mm 16mm 8mm;display:flex;justify-content:space-between;font-family:'Archivo';font-size:7pt;color:#9FC7AB;letter-spacing:.1em;text-transform:uppercase}
+/* fiches (newsletter-style activity cards) */
+.fpage{padding:21mm 14mm 10mm}
+.fpage .fhead{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1.6mm solid var(--green);padding-bottom:3mm;margin-bottom:4mm}
+.fpage .fhead .m{font-family:'Archivo';font-weight:800;font-size:15pt;color:var(--deep);text-transform:uppercase;letter-spacing:.04em}
+.fpage .fhead .c{font-family:'Archivo';font-weight:600;font-size:8pt;color:var(--gray);letter-spacing:.14em;text-transform:uppercase}
+.fiche{border:1px solid var(--line);border-left:1.2mm solid var(--green2);margin-bottom:5mm;page-break-inside:avoid}
+.fiche .top{display:flex;gap:0;border-bottom:.5mm solid var(--line)}
+.fiche .meta{flex:1;display:flex}
+.fiche .meta .c{flex:1;padding:3.2mm 3.5mm;border-right:.4mm solid var(--line)}
+.fiche .meta .c:last-child{border-right:none}
+.fiche .meta .k{font-family:'Archivo';font-weight:700;font-size:6pt;letter-spacing:.16em;color:var(--green);text-transform:uppercase;margin-bottom:1mm}
+.fiche .meta .v{font-family:'Source Serif 4';font-size:8.8pt;line-height:1.45;color:var(--char)}
+.fiche .tag{background:var(--green);color:#fff;font-family:'Archivo';font-weight:700;font-size:6.2pt;letter-spacing:.1em;text-transform:uppercase;padding:1.5mm 3mm;display:flex;align-items:center;white-space:nowrap}
+.fiche .body{padding:3.5mm 4mm}
+.fiche .act{font-family:'Archivo';font-weight:700;font-size:10pt;color:var(--deep);line-height:1.35;margin-bottom:2mm}
+.fiche .obj{font-family:'Source Serif 4';font-size:8.3pt;font-style:italic;color:#44514B;line-height:1.5;border-left:2mm solid var(--yellow);padding-left:2.8mm}
+.fiche .obj b{font-style:normal;font-family:'Archivo';font-weight:700;font-size:6.8pt;letter-spacing:.14em;text-transform:uppercase;color:var(--green);display:block;margin-bottom:.8mm}
+/* photo strip on fiche pages */
+.strip{display:flex;gap:3.5mm;margin-top:4mm}
+.strip figure{flex:1}
+.strip img{width:100%;height:46mm;object-fit:cover;display:block}
+.strip figcaption{font-family:'Archivo';font-size:6.5pt;color:var(--gray);padding-top:1.6mm;line-height:1.4}
+/* others list */
+.others{padding:21mm 16mm 10mm}
+.others table{width:100%;border-collapse:collapse}
+.others td{padding:2.6mm 2mm;border-bottom:.4mm solid var(--line);vertical-align:top;font-size:9.3pt;line-height:1.45}
+.others td.d{width:34mm;font-family:'Archivo';font-weight:600;font-size:8pt;color:var(--green);white-space:nowrap}
+.others td.a{font-family:'Archivo';font-weight:600;font-size:9pt;color:var(--deep)}
+.others td.l{width:38mm;color:#44514B;font-size:8.6pt}
+.others .cnt{font-family:'Archivo';font-weight:700;font-size:8pt;color:var(--bordeaux);letter-spacing:.1em;text-transform:uppercase;margin-bottom:3mm}
+/* ongoing month */
+.ongoing{background:linear-gradient(160deg,#0B3D24,#1E7A44);color:#fff;height:100%;display:flex;flex-direction:column}
+.ongoing .inner{padding:20mm 18mm;flex:1;overflow:hidden}
+.ongoing h2{font-family:'Marcellus';font-size:30pt;color:#fff}
+.ongoing .tag{display:inline-block;background:var(--yellow);color:var(--deep);font-family:'Archivo';font-weight:800;font-size:8.5pt;letter-spacing:.14em;text-transform:uppercase;padding:2mm 5mm;margin:5mm 0}
+.ongoing table{width:100%;border-collapse:collapse}
+.ongoing td{padding:2.4mm 2mm;border-bottom:.4mm solid rgba(255,255,255,.16);font-size:9.3pt;line-height:1.45;color:#EAF4EE;vertical-align:top}
+.ongoing td.d{width:32mm;font-family:'Archivo';font-weight:700;font-size:8pt;color:var(--yellow);white-space:nowrap}
+.ongoing td.a{font-family:'Archivo';font-weight:600;font-size:9pt;color:#fff}
+.ongoing .note{margin-top:6mm;font-size:9.5pt;color:#BFE3CC;font-style:italic}
+.small{font-size:8.5pt;line-height:1.65;color:#44514B}
+/* staff mobilisation bars */
+.sbar{display:flex;align-items:center;gap:3mm;margin:2.2mm 0}
+.sbar .n{width:50mm;font-family:'Archivo';font-weight:600;font-size:7.6pt;color:var(--char);line-height:1.3;flex-shrink:0}
+.sbar .track{flex:1;height:3.6mm;background:var(--mist);position:relative}
+.sbar .fill{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,var(--green),var(--green2))}
+.sbar .fill.b{background:linear-gradient(90deg,var(--bordeaux),#B04A5E)}
+.sbar .c{width:9mm;text-align:right;font-family:'Archivo';font-weight:800;font-size:8.5pt;color:var(--deep);flex-shrink:0}
+.sig{font-family:'Archivo';font-weight:700;font-size:8pt;color:var(--green);letter-spacing:.16em;text-transform:uppercase;margin:5mm 0 2mm}
+</style>
+</head>
+<body>
+
+{# ================= COUVERTURE ================= #}
+<div class="page cover">
+  <img class="coverbg" src="static/images/book/nl_p25_x387.png" alt="">
+  <div class="cover-shade"></div>
+  <div class="mast">
+    <img src="static/logos/au-iapsc-logo.png" alt="AU-IAPSC">
+    <div class="org">Inter-African Phytosanitary Council<small>Conseil Phytosanitaire Interafricain — Union Africaine</small></div>
+  </div>
+  <div class="hero">
+    <div class="kicker">Activités · Missions · Partenariats</div>
+    <h1>Calendrier<br><em>annuel</em> des activités</h1>
+    <div class="sub">Une année de mobilisation pour la santé végétale en Afrique — édition 2026</div>
+    <div class="period">Février — Octobre 2026</div>
+    <div class="badge">Novembre 2026 — mois en cours</div>
+  </div>
+  <div class="cover-stats">
+    <div class="cstat"><div class="v">{{ book.total }}</div><div class="l">Activités réalisées<br>fév. → oct.</div></div>
+    <div class="cstat"><div class="v">{{ book.stats.months }}</div><div class="l">Mois documentés<br>matrices mensuelles</div></div>
+    <div class="cstat"><div class="v">{{ book.stats.countries }}+</div><div class="l">Pays / lieux<br>couverts</div></div>
+    <div class="cstat"><div class="v">{{ book.stats.selected_total }}</div><div class="l">Activités majeures<br>en fiches</div></div>
+  </div>
+  <div class="foot">
+    <div class="edition">AU-IAPSC — Agriculture, Rural Development,<br>Blue Economy &amp; Sustainable Environment (ARBE)<br>Yaoundé, Cameroun · 2026</div>
+  </div>
+</div>
+
+{# ================= PRÉSENTATION ================= #}
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Livre des activités<br>2026</div>
+  </div>
+  <div class="ph">
+    <div class="kick">L'institution</div>
+    <h2 class="pt">L'AU-IAPSC en bref</h2>
+    <div class="rule"></div>
+    <div class="cols2">
+      <div class="col txt">
+        <p>L'<strong>Inter-African Phytosanitary Council</strong> (AU-IAPSC), rattaché au Département de l'Agriculture, du Développement rural, de l'Économie bleue et de l'Environnement durable (ARBE) de la Commission de l'Union africaine, est le conseil phytosanitaire continental chargé de coordonner la protection des végétaux en Afrique.</p>
+        <p>Son mandat couvre la sécurité phytosanitaire, l'harmonisation des mesures aux frontières, le renforcement des capacités des organisations nationales de protection des végétaux (ONPV) et la promotion des normes internationales, notamment la Convention internationale pour la protection des végétaux (CIPV).</p>
+        <p>En 2025, l'AU-IAPSC a documenté <strong>plus de 200 activités de coordination</strong>, dont plus de 45&nbsp;% conduites à distance, et a reçu un financement du WTO-STDF pour un projet sur la gestion du bunchy top de la bananier dans 10 États membres.</p>
+      </div>
+      <div class="col">
+        <div class="box">
+          <h4>Informations institutionnelles</h4>
+          <ul>
+            <li>Siège : Yaoundé, Cameroun</li>
+            <li>Département : AU-ARBE</li>
+            <li>Représentation : Union africaine auprès de la CIPV</li>
+            <li>Programmes clés : APP, STDF-BBTD, GreenPass</li>
+          </ul>
+        </div>
+        <div class="box b">
+          <h4>Mission</h4>
+          <p>Contribuer à un « système phytosanitaire africain robuste » garantissant la sécurité alimentaire et le commerce des végétaux sur le continent.</p>
+        </div>
+        <figure class="ph"><img src="static/images/book/book_nl_p02_x9.png" alt=""><figcaption>Réunion institutionnelle — archives AU-IAPSC</figcaption></figure>
+      </div>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026</span><span>02</span></div>
+  </div>
+</div>
+
+{# ================= SOMMAIRE ================= #}
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Livre des activités<br>2026</div>
+  </div>
+  <div class="toc">
+    <div class="kick">Navigation</div>
+    <h2 class="pt" style="font-size:26pt">Sommaire</h2>
+    <div class="rule"></div>
+    <div class="part"><div class="t">Vue d'ensemble</div><div class="d">Le calendrier annuel en bref · chiffres clés</div></div>
+    <div class="part"><div class="t">Tableau de bord statistique</div><div class="d">Activités, pays, modalités, types — février à octobre</div></div>
+    <div class="part"><div class="t">Les activités mois par mois</div>
+      {% for per in book.stats.per_month %}{% set m = book.months[per] %}
+      <div class="chap"><b>{{ m.name }}</b>{{ m.count }} activité{{ 's' if m.count>1 }} — {{ m.selected|length }} présentée{{ 's' if m.selected|length>1 }}</div>
+      {% endfor %}
+      <div class="chap"><b>Novembre</b>{{ book.months['2026-11'].count }} activités — mois en cours</div>
+    </div>
+    <div class="part"><div class="t">Faits marquants &amp; thématiques</div><div class="d">Les rendez-vous qui ont structuré l'année</div></div>
+    <div class="part"><div class="t">Partenaires &amp; coopération institutionnelle</div><div class="d">CIPV, FAO, STDF, CAADP, AfCFTA et autres</div></div>
+    <div class="part"><div class="t">Perspectives &amp; crédits</div><div class="d">État des lieux, notes éditoriales, sources</div></div>
+  </div>
+  <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026</span><span>03</span></div>
+</div>
+
+{# ================= VUE D'ENSEMBLE ================= #}
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Livre des activités<br>2026</div>
+  </div>
+  <div class="ph">
+    <div class="kick">Introduction</div>
+    <h2 class="pt">Une année de mobilisation phytosanitaire</h2>
+    <div class="rule"></div>
+    <div class="txt">
+      <p>Ce livre présente le <strong>calendrier annuel des activités</strong> de l'AU-IAPSC pour l'année 2026. Sur la période <strong>février–octobre</strong>, <strong>{{ book.total }} activités</strong> ont été documentées et réalisées : instances de gouvernance, ateliers techniques, missions de terrain, consultations internationales et événements de sensibilisation. <strong>Novembre 2026 est un mois en cours</strong> : ses activités programmées sont présentées en fin d'ouvrage.</p>
+      <p>L'année s'ouvre à <strong>Entebbe (Ouganda)</strong> par le 19ᵉ Steering Committee et le lancement du projet STDF sur le bunchy top de la bananier, avant le rendez-vous continental de <strong>mars</strong> : la 20ᵉ Conférence des Parties (CPM 20) de la CIPV à Rome, le sous-comité SPS de l'AfCFTA à Nairobi et le chantier de domestication des lignes directrices de La Havane à Yaoundé.</p>
+      <p>Le second semestre confirme l'ancrage continental du mandat : <strong>Phase 3 du Programme Phytosanitaire Africain</strong> à Addis-Abeba en juillet, <strong>atelier régional CIPV à Libreville</strong> et <strong>Forum Alimentaire Africain à Kigali</strong> en août, puis une vague de consultations semences et partenariats — STDF à Genève, CAADP à Dar es Salaam — jusqu'au calendrier de fin d'année.</p>
+    </div>
+    <div class="pull"><p>« La santé des végétaux est un pilier de la souveraineté alimentaire africaine. »</p><div class="who">— Esprit de la délégation AU-IAPSC, atelier CIPV Libreville</div></div>
+    <div class="g2">
+      <div class="gc"><h3>Chiffres clés — fév. à oct. 2026</h3>
+        <table style="width:100%;border-collapse:collapse;font-size:9.5pt">
+          <tr><td style="padding:2mm 0;border-bottom:.4mm solid var(--line)"><b>{{ book.total }}</b> activités réalisées</td><td style="text-align:right;border-bottom:.4mm solid var(--line)">{{ book.stats.months }} mois documentés</td></tr>
+          <tr><td style="padding:2mm 0;border-bottom:.4mm solid var(--line)"><b>{{ book.stats.countries }}+</b> pays / lieux</td><td style="text-align:right;border-bottom:.4mm solid var(--line)">{{ book.stats.format.get('En ligne',0)+book.stats.format.get('Hybride',0) }} à distance</td></tr>
+          <tr><td style="padding:2mm 0;border-bottom:.4mm solid var(--line)"><b>{{ book.stats.selected_total }}</b> activités présentées en fiches</td><td style="text-align:right;border-bottom:.4mm solid var(--line)">{{ book.stats.ongoing_count }} prévues en novembre</td></tr>
+          <tr><td style="padding:2mm 0"><b>Calendrier</b> annuel</td><td style="text-align:right">édition 2026</td></tr>
+        </table>
+      </div>
+      <div class="gc"><h3>Comment lire ce livre</h3>
+        <p class="small">Chaque mois fait l'objet d'une ouverture suivie des fiches des <strong>activités majeures</strong> (date, lieu, personnel, activité, objectifs) et d'une liste des autres activités documentées. Toutes les activités listées ont eu lieu ; novembre est signalé « en cours ». Les objectifs sont des reformulations éditoriales issues des matrices et des documents de référence.</p>
+      </div>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026</span><span>04</span></div>
+  </div>
+</div>
+
+{# ================= TABLEAU DE BORD 1 ================= #}
+<div class="page" style="background:var(--pale)">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Tableau de bord<br>février — octobre 2026</div>
+  </div>
+  <div class="ph">
+    <div class="kick">Tableau de bord</div>
+    <h2 class="pt">L'année en chiffres</h2>
+    <div class="rule"></div>
+    <div class="kpis">
+      <div class="kpi"><div class="v">{{ book.total }}</div><div class="l">Activités réalisées<br>fév. → oct. 2026</div></div>
+      <div class="kpi a"><div class="v">{{ book.stats.countries }}+</div><div class="l">Pays / lieux distincts</div></div>
+      <div class="kpi"><div class="v">{{ book.stats.format.get('Présentiel',0) }}</div><div class="l">En présentiel</div></div>
+      <div class="kpi y"><div class="v">{{ book.stats.format.get('En ligne',0)+book.stats.format.get('Hybride',0) }}</div><div class="l">À distance<br>(en ligne + hybride)</div></div>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="v">{{ book.stats.type.get('Atelier / Formation',0) }}</div><div class="l">Ateliers &amp; formations</div></div>
+      <div class="kpi a"><div class="v">{{ book.stats.type.get('Réunion / Gouvernance',0) }}</div><div class="l">Réunions &amp; gouvernance</div></div>
+      <div class="kpi"><div class="v">{{ book.stats.type.get('Mission / Voyage',0) }}</div><div class="l">Missions &amp; voyages</div></div>
+      <div class="kpi y"><div class="v">{{ book.stats.staff_filled }}</div><div class="l">Activités avec<br>personnel désigné</div></div>
+    </div>
+    <div class="g2">
+      <div class="gc"><h3>Activités par mois</h3><img src="static/charts/activities_per_month.png"></div>
+      <div class="gc"><h3>Modalités de tenue</h3><img src="static/charts/format_donut.png"></div>
+    </div>
+    <div class="g2" style="margin-top:5mm">
+      <div class="gc"><h3>Activités par type</h3><img src="static/charts/types_bars.png"></div>
+      <div class="gc"><h3>Temps forts de l'année</h3>
+        <p class="small"><b>Mars</b> — CPM 20 à Rome, AfCFTA-SPS à Nairobi.<br><b>Juillet</b> — Phase 3 de l'APP à Addis-Abeba, WAVE à Abuja.<br><b>Août</b> — Atelier régional CIPV à Libreville, AFSF à Kigali.<br><b>Septembre</b> — Conférence semences, CAADP à Harare.<br><b>Octobre</b> — Consultations semences, rendez-vous CAADP.</p>
+      </div>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026</span><span>05</span></div>
+  </div>
+</div>
+
+{# ================= TABLEAU DE BORD 2 ================= #}
+<div class="page" style="background:var(--pale)">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Tableau de bord<br>février — octobre 2026</div>
+  </div>
+  <div class="ph">
+    <div class="kick">Tableau de bord</div>
+    <h2 class="pt" style="font-size:17pt">Rayonnement géographique &amp; thématique</h2>
+    <div class="rule"></div>
+    <div class="g2">
+      <div class="gc"><h3>Principaux pays / lieux</h3><img src="static/charts/top_countries.png">
+        <h3 style="margin-top:5mm">Personnel mobilisé</h3>
+        {% set smax = book.stats.staff_roles[0][1] if book.stats.staff_roles else 1 %}
+        {% for label, cnt in book.stats.staff_roles %}
+        <div class="sbar"><div class="n">{{ label }}</div><div class="track"><div class="fill" style="width:{{ (cnt / smax * 100)|round(1) }}%"></div></div><div class="c">{{ cnt }}</div></div>
+        {% endfor %}
+        {% if book.stats.staff_other %}
+        <div class="sbar"><div class="n">Autres fonctions / partenaires / nommés</div><div class="track"><div class="fill b" style="width:{{ (book.stats.staff_other / smax * 100)|round(1) }}%"></div></div><div class="c">{{ book.stats.staff_other }}</div></div>
+        {% endif %}
+        <p class="small" style="margin-top:3mm">Fonctions désignées dans les matrices — une activité peut mobiliser plusieurs fonctions.</p>
+      </div>
+      <div class="gc">
+        <h3>Répartition mensuelle détaillée</h3>
+        <table style="width:100%;border-collapse:collapse;font-size:9.5pt">
+          {% for per in book.stats.per_month %}{% set m = book.months[per] %}
+          <tr><td style="padding:2.2mm 0;border-bottom:.4mm solid var(--line)"><b>{{ m.name }}</b></td><td style="text-align:right;border-bottom:.4mm solid var(--line)">{{ book.stats.per_month[per] }} activités</td></tr>
+          {% endfor %}
+          <tr><td style="padding:2.2mm 0"><b>Novembre <span style="font-size:7pt;color:var(--bordeaux)">(en cours)</span></b></td><td style="text-align:right">{{ book.stats.ongoing_count }} prévues</td></tr>
+        </table>
+        <h3 style="margin-top:5mm">Couverture</h3>
+        <p class="small">Rayonnement continental : Afrique de l'Ouest à l'Afrique australe, Afrique centrale et septentrionale, et rendez-vous internationaux (Rome, Genève, Séoul, Mexico, Kingston). Une part significative des travaux se déroule à distance, au siège de Yaoundé ou dans les capitales concernées.</p>
+      </div>
+    </div>
+    <div class="strip" style="margin-top:6mm">
+      <figure><img src="static/images/book/book_nl_p07_x97.png"><figcaption>Atelier — archives AU-IAPSC</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p15_x242.png"><figcaption>Réunion technique — archives AU-IAPSC</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p27_x423.png"><figcaption>Visite de terrain — archives AU-IAPSC</figcaption></figure>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026</span><span>06</span></div>
+  </div>
+</div>
+
+{# ================= CHAPITRES MENSUELS (FÉV–OCT) ================= #}
+{% set photo_pool = book.photos %}
+{% set ns = namespace(pi=0) %}
+{% for per in book.stats.per_month %}{% set m = book.months[per] %}
+{# ---- ouverture du mois ---- #}
+<div class="page month">
+  <div class="top"><span>AU-IAPSC · Calendrier annuel 2026</span><span>Chapitre mensuel</span></div>
+  <div class="ghost">{{ m.name|upper }}</div>
+  <div class="title"><h2>{{ m.name }} 2026</h2><div class="fr">{{ m.count }} activité{{ 's' if m.count>1 }} réalisée{{ 's' if m.count>1 }} — {{ m.selected|length }} présentée{{ 's' if m.selected|length>1 }} en fiches</div></div>
+  <div class="count">{{ m.count }} activité{{ 's' if m.count>1 }}</div>
+  <div class="events">
+    <h4>Moments clés du mois</h4>
+    {% for a in m.selected[:5] %}
+    <div class="ev"><div class="d">{{ a.date[:28] }}</div><div class="t">{{ a.activity[:95] }}</div></div>
+    {% endfor %}
+  </div>
+  <img class="photo" src="static/images/book/{{ photo_pool[(loop.index0*3+1) % photo_pool|length] }}" alt="">
+  <div class="pfoot"><span>{{ m.name }} 2026</span><span>Calendrier annuel</span></div>
+</div>
+
+{# ---- fiches des activités majeures (3 par page + photos) ---- #}
+{% for chunk in m.selected|batch(3) %}
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">{{ m.name }} 2026<br>Fiches activités</div>
+  </div>
+  <div class="fpage">
+    <div class="fhead"><div class="m">{{ m.name }} 2026</div><div class="c">Activités majeures — {{ loop.index }}/{{ (m.selected|length + 2)//3 }}</div></div>
+    {% for a in chunk %}
+    <div class="fiche">
+      <div class="top">
+        <div class="meta">
+          <div class="c"><div class="k">Date</div><div class="v">{{ a.date }}</div></div>
+          <div class="c"><div class="k">Lieu</div><div class="v">{{ a.venue if a.venue else 'Non précisé' }}{% if a.country and a.country not in a.venue %} — {{ a.country }}{% endif %}</div></div>
+          <div class="c"><div class="k">Format</div><div class="v">{{ a.format }}</div></div>
+          <div class="c"><div class="k">Personnel</div><div class="v">{{ a.staff if a.staff else '—' }}</div></div>
+        </div>
+        <div class="tag">Réalisée</div>
+      </div>
+      <div class="body">
+        <div class="act">{{ a.activity }}</div>
+        <div class="obj"><b>Objectifs / résultats attendus</b>{{ a.objectives }}</div>
+      </div>
+    </div>
+    {% endfor %}
+    <div class="strip">
+      {% for k in range(3) %}
+      {% set pi = (ns.pi) % photo_pool|length %}
+      <figure><img src="static/images/book/{{ photo_pool[pi] }}"><figcaption>Archives AU-IAPSC — {{ m.name }}</figcaption></figure>
+      {% set ns.pi = ns.pi + 1 %}
+      {% endfor %}
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — {{ m.name }}</span><span>{{ m.name[:3] }}.</span></div>
+  </div>
+</div>
+{% endfor %}
+
+{# ---- autres activités du mois ---- #}
+{% if m.others %}
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">{{ m.name }} 2026<br>Autres activités</div>
+  </div>
+  <div class="others">
+    <div class="cnt">Autres activités documentées en {{ m.name_lower }} 2026 — {{ m.others|length }}</div>
+    <p class="small" style="margin-bottom:5mm">Toutes les activités du calendrier ont eu lieu. Les fiches détaillées sont consacrées aux activités majeures du mois ; les entrées ci-dessous complètent le calendrier {{ m.name_lower }} 2026.</p>
+    <table>
+      {% for a in m.others %}
+      <tr>
+        <td class="d">{{ a.date[:26] }}</td>
+        <td class="a">{{ a.activity }}</td>
+        <td class="l">{{ a.venue if a.venue else a.country }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <div class="strip">
+      <figure><img src="static/images/book/{{ photo_pool[(loop.index0*5+3) % photo_pool|length] }}"><figcaption>Archives AU-IAPSC — {{ m.name }}</figcaption></figure>
+      <figure><img src="static/images/book/{{ photo_pool[(loop.index0*5+11) % photo_pool|length] }}"><figcaption>Archives AU-IAPSC — {{ m.name }}</figcaption></figure>
+      <figure><img src="static/images/book/{{ photo_pool[(loop.index0*5+19) % photo_pool|length] }}"><figcaption>Archives AU-IAPSC — {{ m.name }}</figcaption></figure>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026 — {{ m.name }}</span><span>{{ m.name[:3] }}.</span></div>
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+
+{# ================= NOVEMBRE — EN COURS ================= #}
+<div class="page ongoing">
+  <div class="inner">
+    <div class="kick" style="color:var(--yellow)">Mois en cours</div>
+    <h2>Novembre 2026</h2>
+    <div class="tag">Calendrier annuel — édition en cours</div>
+    <p style="font-size:10.5pt;line-height:1.7;color:#EAF4EE;max-width:150mm">Les activités de novembre 2026 sont <strong>en cours de réalisation</strong> à la date d'édition de ce livre. Elles sont présentées ci-dessous telles que planifiées dans la matrice mensuelle ; le bilan consolidé paraîtra dans la prochaine édition du calendrier annuel.</p>
+    <table style="margin-top:6mm">
+      {% for a in book.months['2026-11'].activities %}
+      <tr>
+        <td class="d">{{ a.date[:26] }}</td>
+        <td class="a">{{ a.activity }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <p class="note">AU-IAPSC — Calendrier annuel des activités 2026 · Novembre : {{ book.stats.ongoing_count }} activités programmées.</p>
+  </div>
+</div>
+
+{# ================= FAITS MARQUANTS ================= #}
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Synthèse<br>février — octobre 2026</div>
+  </div>
+  <div class="ph">
+    <div class="kick b">Synthèse</div>
+    <h2 class="pt">Faits marquants &amp; thématiques</h2>
+    <div class="rule"></div>
+    <div class="cols2">
+      <div class="col txt">
+        <div class="sig">Gouvernance &amp; diplomatie</div>
+        <p>La <strong>20ᵉ Conférence des Parties (CPM 20)</strong> de la CIPV à Rome (9–13 mars) a ouvert l'année diplomatique. L'AU-IAPSC y a porté la coordination phytosanitaire africaine aux côtés des ONPV et partenaires mondiaux.</p>
+        <p>En août, le <strong>atelier régional CIPV pour l'Afrique à Libreville</strong> a réuni experts et autorités ; le <strong>Forum Alimentaire Africain (AFSF)</strong> à Kigali a mis la santé des végétaux au cœur de l'agenda continental.</p>
+      </div>
+      <div class="col txt">
+        <div class="sig">Capacités &amp; projets</div>
+        <p>Le <strong>projet STDF sur le bunchy top de la bananier</strong> (lancé en février à Entebbe) et la <strong>Phase 3 du Programme Phytosanitaire Africain</strong> (formation des formateurs à Addis-Abeba, juillet) constituent les deux chantiers capacitaires majeurs de l'année.</p>
+        <p>Les ateliers de <strong>biopesticides à Nairobi</strong> (avril), le <strong>renforcement Barry Callebaut</strong> à Yaoundé (août), la <strong>Journée internationale de la santé des végétaux</strong> (mai) et le <strong>WAVE à Abuja</strong> (juillet) illustrent la diversification thématique du mandat.</p>
+      </div>
+    </div>
+    <div class="strip">
+      <figure><img src="static/images/book/book_nl_p25_x387.png"><figcaption>Session de travail — archives AU-IAPSC</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p12_x174.png"><figcaption>Rencontre institutionnelle — archives AU-IAPSC</figcaption></figure>
+      <figure><img src="static/images/book/book_nl_p29_x455.png"><figcaption>Atelier technique — archives AU-IAPSC</figcaption></figure>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026</span><span>Faits marquants</span></div>
+  </div>
+</div>
+
+{# ================= PARTENAIRES ================= #}
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">Coopération<br>institutionnelle</div>
+  </div>
+  <div class="ph">
+    <div class="kick">Coopération</div>
+    <h2 class="pt">Partenaires &amp; coopération institutionnelle</h2>
+    <div class="rule"></div>
+    <div class="cols2">
+      <div class="col">
+        <div class="sig">Cadre multilatéral</div>
+        <div class="box"><ul>
+          <li>Convention internationale pour la protection des végétaux (CIPV / IPPC)</li>
+          <li>Organisation des Nations unies pour l'alimentation et l'agriculture (FAO)</li>
+          <li>Fonds pour l'application des normes (STDF / WTO)</li>
+          <li>Commissariat aux Plantes et Animaux (CPAA / AU-IBAR)</li>
+        </ul></div>
+        <div class="sig">Programmes africains</div>
+        <div class="box b"><ul>
+          <li>Programme phytosanitaire africain (APP) — Phase 3</li>
+          <li>CAADP — lignes directrices de La Havane</li>
+          <li>AfCFTA — sous-comité SPS</li>
+          <li>CEA / CEEAC — commissions d'agriculture</li>
+        </ul></div>
+      </div>
+      <div class="col">
+        <div class="sig">Technique &amp; privé</div>
+        <div class="box"><ul>
+          <li>CABI — biopesticides, appui technique</li>
+          <li>icipe, IITA, universités partenaires</li>
+          <li>TradeMark Africa, WAVE, Agrisport</li>
+          <li>Barry Callebaut, Croplife, STAK</li>
+        </ul></div>
+        <div class="box b">
+          <h4>Note</h4>
+          <p class="small">Liste reconstituée des intitulés d'activités et des documents de référence. Un inventaire exhaustif des partenaires mériterait validation par le service communication.</p>
+        </div>
+        <figure class="ph"><img src="static/images/book/book_nl_p20_x304.png"><figcaption>Réunion de coordination — archives AU-IAPSC</figcaption></figure>
+      </div>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026</span><span>Partenaires</span></div>
+  </div>
+</div>
+
+{# ================= PERSPECTIVES ================= #}
+<div class="page">
+  <div class="mtop">
+    <div style="display:flex;align-items:center;gap:4mm"><img src="static/logos/au-iapsc-logo.png"><div class="org">Inter-African Phytosanitary Council<small>AU-IAPSC — Union africaine</small></div></div>
+    <div class="doc">État des lieux<br>et suite</div>
+  </div>
+  <div class="ph">
+    <div class="kick">État des lieux</div>
+    <h2 class="pt">Perspectives &amp; suite</h2>
+    <div class="rule"></div>
+    <div class="txt">
+      <p>Sur <strong>février–octobre 2026</strong>, le calendrier annuel de l'AU-IAPSC a documenté <strong>{{ book.total }} activités réalisées</strong>, dont plusieurs rendez-vous structurants — CPM 20, Phase 3 de l'APP, atelier régional CIPV, AFSF — et un flux soutenu de consultations en ligne. <strong>Novembre</strong>, mois en cours à la date d'édition, prolonge cette dynamique avec {{ book.stats.ongoing_count }} activités programmées.</p>
+      <p>Les chantiers ouverts pour la suite de l'année et 2027 incluent le suivi du <strong>projet STDF BBTD</strong>, la domestisation des lignes directrices CAADP, le déploiement des systèmes d'alerte précoce (EWS) et la suite des travaux sur les échanges de semences.</p>
+      <p>Ce livre constitue la <strong>première édition du calendrier annuel des activités</strong>. Une édition complémentaire paraîtra après la clôture de novembre et la consolidation des rapports de mission.</p>
+    </div>
+    <div class="g2" style="margin-top:6mm">
+      <div class="gc"><h3>Points de vigilance éditoriale</h3>
+        <p class="small">• Matrice d'octobre en version brouillon — données susceptibles d'évoluer.<br>• Doublons inter-mois signalés (AFSF, STDF WG, APP ToT, CWA).<br>• Objectifs : reformulations éditoriales à valider.<br>• Activités majeures : sélection éditoriale des {{ book.stats.selected_total }} fiches présentées.</p>
+      </div>
+      <div class="gc"><h3>Prochaines étapes</h3>
+        <p class="small">1. Validation des objectifs rédigés par le service concerné.<br>2. Intégration des rapports de mission pour les résultats documentés.<br>3. Ajout des photographies originales 2026 et du logo vectoriel.<br>4. Édition « bilan annuel » après clôture de novembre.</p>
+      </div>
+    </div>
+    <div class="pfoot"><span>AU-IAPSC · Calendrier annuel des activités 2026</span><span>Perspectives</span></div>
+  </div>
+</div>
+
+{# ================= CRÉDITS ================= #}
+<div class="page">
+  <div class="ph" style="background:var(--deep);color:#fff;height:100%">
+    <div class="kick" style="color:var(--yellow)">Crédits &amp; sources</div>
+    <h2 class="pt" style="color:#fff">Notes éditoriales &amp; sources</h2>
+    <div class="rule" style="background:linear-gradient(90deg,var(--yellow),transparent)"></div>
+    <div class="cols2">
+      <div class="col" style="color:#DFF0E4">
+        <div class="sig" style="color:var(--yellow)">Sources des données</div>
+        <p class="small" style="color:#DFF0E4">Matrices mensuelles d'activités AU-IAPSC (février–novembre 2026, format .docm) — champs Dates, Venue, Staff concerned, Activity. Rapport annuel AU-IAPSC 2025 et newsletter pour la voix éditoriale et les archives photographiques.</p>
+        <div class="sig" style="color:var(--yellow);margin-top:6mm">Direction artistique</div>
+        <p class="small" style="color:#DFF0E4">Charte inspirée de « The AU-IAPSC Newsletter » : palette vert/bordeaux/jaune, serif corps + sans titres, fiches d'activités normalisées, masthead institutionnel.</p>
+      </div>
+      <div class="col" style="color:#DFF0E4">
+        <div class="sig" style="color:var(--yellow)">Limites connues</div>
+        <p class="small" style="color:#DFF0E4">• {{ book.duplicates|length }} doublons inter-mois identifiés et signalés.<br>• Une part des lieux non précisée dans les matrices.<br>• Champs « Objectifs » et « Statut » vides dans les sources.<br>• Photographies : archives newsletter/rapport — en attendant les visuels 2026.<br>• Novembre 2026 : mois en cours, activités programmées.</p>
+        <div style="margin-top:8mm;font-family:'Marcellus';font-size:20pt;color:#fff">AU-IAPSC</div>
+        <p class="small" style="color:#9FC7AB">Inter-African Phytosanitary Council<br>Yaoundé, Cameroun — Calendrier annuel 2026</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

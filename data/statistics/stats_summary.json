@@ -1,0 +1,67 @@
+{
+  "period": "2026-02 to 2026-11",
+  "total_activities": 129,
+  "months_documented": [
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08",
+    "2026-09",
+    "2026-10",
+    "2026-11"
+  ],
+  "months_missing": [],
+  "activities_per_month": {
+    "2026-02": 8,
+    "2026-03": 19,
+    "2026-04": 19,
+    "2026-05": 9,
+    "2026-06": 5,
+    "2026-07": 20,
+    "2026-08": 13,
+    "2026-09": 7,
+    "2026-10": 12,
+    "2026-11": 17
+  },
+  "distinct_countries": 20,
+  "countries": {
+    "Cameroun (Siège)": 19,
+    "Kenya": 9,
+    "Cameroun": 9,
+    "Éthiopie": 9,
+    "Suisse": 4,
+    "Ouganda": 3,
+    "Gabon": 3,
+    "Nigeria": 2,
+    "Rwanda": 2,
+    "Jamaïque": 2,
+    "Italie": 1,
+    "Namibie": 1,
+    "Bénin": 1,
+    "Zimbabwe": 1,
+    "Tanzanie": 1,
+    "Corée du Sud": 1,
+    "Côte d'Ivoire": 1,
+    "Belgique": 1,
+    "Guinée équatoriale": 1,
+    "Mexique": 1
+  },
+  "format": {
+    "Présentiel": 78,
+    "En ligne": 49,
+    "Hybride": 2
+  },
+  "type": {
+    "Réunion / Gouvernance": 56,
+    "Webinaire / Visio": 23,
+    "Autre": 22,
+    "Atelier / Formation": 19,
+    "Projet / Partenariat": 6,
+    "Mission / Voyage": 3
+  },
+  "unknown_country": 57,
+  "note": "Comptages réels issus des matrices .docm (octobre 2026 = version brouillon). Classification type/format/pays = heuristique à valider."
+}

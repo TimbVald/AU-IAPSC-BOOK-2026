@@ -1,0 +1,73 @@
+﻿=== FONTS (par volume de texte) ===
+  TwCenMT-Regular: 35456
+  Dax-Bold: 2706
+  Causten-Regular: 1629
+  TwCenMT-BoldItalic: 124
+  TwCenMT-Bold: 99
+  Causten-Bold: 37
+  Causten-Black: 23
+  GothamUltra: 22
+
+=== TAILLES ===
+  2.4pt: 1350
+  5.8pt: 45
+  9.0pt: 70
+  10.0pt: 201
+  11.0pt: 35543
+  12.0pt: 2831
+  14.0pt: 22
+  31.0pt: 22
+  46.4pt: 3
+  53.4pt: 9
+
+=== COULEURS (hex) ===
+  #000000: 37965
+  #231f20: 1395
+  #ffffff: 523
+  #92203a: 124
+  #7d122c: 70
+  #fff200: 12
+  #d2232a: 7
+
+=== RESUME PAR PAGE ===
+p01 | img:6 vec:1439 | The AU-IAPSC Newsletter I 1 Inter-African Phytosanitary Council ( AU-IAPSC) The AU-IAPSC N
+p02 | img:3 vec:717 | The AU-IAPSC Newsletter I 2 Inter-African Phytosanitary Council ( AU-IAPSC) Agriculture is
+p03 | img:3 vec:795 | The AU-IAPSC Newsletter I 3 Inter-African Phytosanitary Council ( AU-IAPSC) Date: Venue: S
+p04 | img:3 vec:797 | The AU-IAPSC Newsletter I 4 Inter-African Phytosanitary Council ( AU-IAPSC) January 2024 D
+p05 | img:3 vec:796 | The AU-IAPSC Newsletter I 5 Inter-African Phytosanitary Council ( AU-IAPSC) February 2024 
+p06 | img:2 vec:756 | The AU-IAPSC Newsletter I 6 Inter-African Phytosanitary Council ( AU-IAPSC) Date: Venue: S
+p07 | img:3 vec:756 | The AU-IAPSC Newsletter I 7 Inter-African Phytosanitary Council ( AU-IAPSC) Date: Venue: S
+p08 | img:4 vec:756 | The AU-IAPSC Newsletter I 8 Inter-African Phytosanitary Council ( AU-IAPSC) Date: Venue: S
+p09 | img:2 vec:756 | The AU-IAPSC Newsletter I 9 Inter-African Phytosanitary Council ( AU-IAPSC) Date: Venue: S
+p10 | img:4 vec:796 | The AU-IAPSC Newsletter I 10 Inter-African Phytosanitary Council ( AU-IAPSC) Date: Date: V
+p11 | img:2 vec:756 | The AU-IAPSC Newsletter I 11 Inter-African Phytosanitary Council ( AU-IAPSC) Date: Venue: 
+p12 | img:4 vec:834 | The AU-IAPSC Newsletter I 12 Inter-African Phytosanitary Council ( AU-IAPSC) Date: Date: D
+p13 | img:3 vec:794 | The AU-IAPSC Newsletter I 13 Inter-African Phytosanitary Council ( AU-IAPSC) Date: Date: V
+p14 | img:4 vec:835 | The AU-IAPSC Newsletter I 14 Inter-African Phytosanitary Council ( AU-IAPSC) Date: Date: D
+p15 | img:4 vec:833 | The AU-IAPSC Newsletter I 15 Inter-African Phytosanitary Council ( AU-IAPSC) Date: Date: D
+p16 | img:2 vec:735 | The AU-IAPSC Newsletter I 16 Inter-African Phytosanitary Council ( AU-IAPSC) Activity Part
+p17 | img:2 vec:756 | The AU-IAPSC Newsletter I 17 Inter-African Phytosanitary Council ( AU-IAPSC) Date: Venue: 
+p18 | img:3 vec:775 | The AU-IAPSC Newsletter I 18 Inter-African Phytosanitary Council ( AU-IAPSC) April 2024 In
+p19 | img:3 vec:794 | The AU-IAPSC Newsletter I 19 Inter-African Phytosanitary Council ( AU-IAPSC) Date: Date: V
+p20 | img:3 vec:795 | The AU-IAPSC Newsletter I 20 Inter-African Phytosanitary Council ( AU-IAPSC) Date: Date: V
+p21 | img:2 vec:775 | The AU-IAPSC Newsletter I 21 Inter-African Phytosanitary Council ( AU-IAPSC) MAY 2024 R eg
+p22 | img:4 vec:834 | The AU-IAPSC Newsletter I 22 Inter-African Phytosanitary Council ( AU-IAPSC) Date: Date: D
+p23 | img:3 vec:796 | The AU-IAPSC Newsletter I 23 Inter-African Phytosanitary Council ( AU-IAPSC) Date: Date: V
+p24 | img:3 vec:795 | The AU-IAPSC Newsletter I 24 Inter-African Phytosanitary Council ( AU-IAPSC) Date: Date: V
+p25 | img:3 vec:756 | The AU-IAPSC Newsletter I 25 Inter-African Phytosanitary Council ( AU-IAPSC) Date: Venue: 
+p26 | img:3 vec:796 | The AU-IAPSC Newsletter I 26 Inter-African Phytosanitary Council ( AU-IAPSC) Date: Date: V
+p27 | img:3 vec:796 | The AU-IAPSC Newsletter I 27 Inter-African Phytosanitary Council ( AU-IAPSC) Date: Date: V
+p28 | img:4 vec:835 | The AU-IAPSC Newsletter I 28 Inter-African Phytosanitary Council ( AU-IAPSC) Objectives, E
+p29 | img:4 vec:795 | The AU-IAPSC Newsletter I 29 Inter-African Phytosanitary Council ( AU-IAPSC) Objectives, E
+p30 | img:1 vec:717 | The AU-IAPSC Newsletter I 30 Inter-African Phytosanitary Council ( AU-IAPSC) African Union
+python.exe : Traceback (most recent call last):
+Au caractère Ligne:1 : 67
++ ... BOOK-2026'; & '.\.venv\Scripts\python.exe' 'tools\analyze_newsletter. ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "D:\Mes Projets\Nouveau dossier\AU-IAPSC-BOOK-2026\tools\analyze_newsletter.py", line 64, in <module>
+    fn = f"{out}/nl_p{pno+1:02d}_x{xref}.{pix.ext}"
+                                          ^^^^^^^
+AttributeError: 'Pixmap' object has no attribute 'ext'
